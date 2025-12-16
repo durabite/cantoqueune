@@ -1,75 +1,151 @@
 ---
-
+import { Button } from "@/components/ui/button";
+import { Menu } from "lucide-react";
+import "@/styles/global.css";
 ---
 
-<nav class="navbar">
-    <div class="container">
-        <a href="#" class="logo">
+<nav
+    class="fixed top-0 left-0 w-full z-[1000] transition-transform duration-300 ease-in-out border-b border-white/5 bg-[#050510]/75 backdrop-blur-md py-6 md:py-10 -translate-y-full shadow-lg"
+    id="main-nav"
+>
+    <div
+        class="container mx-auto px-8 md:px-12 flex justify-between items-center max-w-[1200px]"
+    >
+        <a href="#" class="block my-8">
             <img
                 src="/logo-cantoqueuneS.svg"
                 alt="Canto Que Une"
                 width="250"
                 height="100"
+                class="block h-10 md:h-12 w-auto p-8"
             />
         </a>
-        <div class="nav-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#fechas">Fechas</a>
-            <a href="#ceremonias">Ceremonias</a>
-            <a href="#productos">Productos</a>
-            <a href="#galeria">Galería</a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex gap-8 items-center">
+            <a
+                href="#inicio"
+                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all"
+                >Inicio</a
+            >
+            <a
+                href="#fechas"
+                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all"
+                >Fechas</a
+            >
+            <a
+                href="#ceremonias"
+                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all"
+                >Ceremonias</a
+            >
+            <a
+                href="#productos"
+                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all"
+                >Productos</a
+            >
+            <a
+                href="#galeria"
+                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all"
+                >Galería</a
+            >
         </div>
-        <button class="btn btn-outline mobile-menu-btn"
-            ><i class="fas fa-bars"></i></button
+
+        <!-- Mobile Menu Button -->
+        <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden text-white hover:bg-white/10 hover:text-white border border-white/30"
+            id="mobile-menu-toggle"
+            aria-label="Toggle menu"
+        >
+            <Menu className="h-6 w-6" />
+        </Button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+        class="hidden absolute top-full left-0 w-full bg-[#050510]/95 p-5 flex-col gap-4 text-center border-b border-white/10 shadow-xl"
+        id="mobile-menu"
+    >
+        <a
+            href="#inicio"
+            class="nav-link text-sm uppercase tracking-widest py-2">Inicio</a
+        >
+        <a
+            href="#fechas"
+            class="nav-link text-sm uppercase tracking-widest py-2">Fechas</a
+        >
+        <a
+            href="#ceremonias"
+            class="nav-link text-sm uppercase tracking-widest py-2"
+            >Ceremonias</a
+        >
+        <a
+            href="#productos"
+            class="nav-link text-sm uppercase tracking-widest py-2">Productos</a
+        >
+        <a
+            href="#galeria"
+            class="nav-link text-sm uppercase tracking-widest py-2">Galería</a
         >
     </div>
 </nav>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        // Mobile Menu Toggle
-        const mobileBtn = document.querySelector(
-            ".mobile-menu-btn",
-        ) as HTMLElement | null;
-        const navLinks = document.querySelector(
-            ".nav-links",
-        ) as HTMLElement | null;
+        const mobileBtn = document.getElementById("mobile-menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navbar = document.getElementById("main-nav");
 
-        if (mobileBtn && navLinks) {
+        // Toggle Mobile Menu
+        if (mobileBtn && mobileMenu) {
             mobileBtn.addEventListener("click", () => {
-                const isVisible = navLinks.style.display === "flex";
+                mobileMenu.classList.toggle("hidden");
+                mobileMenu.classList.toggle("flex");
+            });
 
-                if (isVisible) {
-                    navLinks.style.display = "none";
-                } else {
-                    navLinks.style.display = "flex";
-                    navLinks.style.flexDirection = "column";
-                    navLinks.style.position = "absolute";
-                    navLinks.style.top = "100%";
-                    navLinks.style.left = "0";
-                    navLinks.style.width = "100%";
-                    navLinks.style.background = "rgba(5, 5, 16, 0.95)";
-                    navLinks.style.padding = "20px";
-                    navLinks.style.textAlign = "center";
-                }
+            // Close menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll("a");
+            mobileLinks.forEach((link) => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("hidden");
+                    mobileMenu.classList.remove("flex");
+                });
             });
         }
 
         // Navbar Scroll Effect
-        const navbar = document.querySelector(".navbar") as HTMLElement | null;
-
         if (navbar) {
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add("visible");
-                    navbar.style.padding = "10px 0";
-                    navbar.style.background = "rgba(5, 5, 16, 0.95)";
+            const handleScroll = () => {
+                if (window.scrollY > 100) {
+                    navbar.classList.remove("-translate-y-full");
+                    navbar.classList.add("translate-y-0");
                 } else {
-                    navbar.classList.remove("visible");
-                    navbar.style.padding = "20px 0";
-                    navbar.style.background = "rgba(5, 5, 16, 0.8)";
+                    navbar.classList.add("-translate-y-full");
+                    navbar.classList.remove("translate-y-0");
+                    mobileMenu?.classList.add("hidden"); // Also hide mobile menu if open
+                    mobileMenu?.classList.remove("flex");
                 }
-            });
+            };
+
+            // Run on load in case we start scrolled down
+            handleScroll();
+            window.addEventListener("scroll", handleScroll);
         }
     });
 </script>
+
+<style>
+    .nav-link {
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        opacity: 1;
+        background: var(--gradient-main);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+</style>

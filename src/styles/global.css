@@ -132,10 +132,10 @@ ul {
     list-style: none;
 }
 
-img {
+/* img {
     max-width: 100%;
     display: block;
-}
+} */
 
 .container {
     max-width: 1200px;
@@ -241,7 +241,7 @@ h4 {
 }
 
 /* Navbar */
-.navbar {
+/* .navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -251,7 +251,7 @@ h4 {
     background: rgba(5, 5, 16, 0.8);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
+} */
 
 .navbar .container {
     display: flex;
