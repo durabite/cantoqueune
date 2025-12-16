@@ -325,6 +325,7 @@ h4 {
     line-height: 1;
     background: var(--gradient-main);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: var(--font-heading);
 }
