@@ -1,360 +1,39 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import CountdownSection from "../components/CountdownSection.astro";
+import TourDatesSection from "../components/TourDatesSection.astro";
+import CeremoniesSection from "../components/CeremoniesSection.astro";
+import ProductsSection from "../components/ProductsSection.astro";
+import QuoteSection from "../components/QuoteSection.astro";
+import GallerySection from "../components/GallerySection.astro";
+import TestimonialsSection from "../components/TestimonialsSection.astro";
 ---
 
 <Layout title="Canto Que Une - Conciertos de Música Medicina">
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="/logo-cantoqueuneS.svg" alt="Canto Que Une" width="250" height="100">
-            </a>
-            <div class="nav-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#fechas">Fechas</a>
-                <a href="#ceremonias">Ceremonias</a>
-                <a href="#productos">Productos</a>
-                <a href="#galeria">Galería</a>
-            </div>
-            <button class="btn btn-outline mobile-menu-btn"><i class="fas fa-bars"></i></button>
-        </div>
-    </nav>
 
     <!-- Hero Section -->
-    <header id="inicio" class="hero">
-        <div class="hero-video-bg">
-            <video src="/BG-Hero.mp4" autoplay loop muted playsinline></video>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <img src="/logo-cantoqueuneG.svg" alt="Canto Que Une" class="hero-logo">
-
-            <h1 class="main-title">
-                <span class="small-block">POR PRIMERA VEZ EN MÉXICO</span>
-                Indios Beta
-            </h1>
-
-            <div class="hero-buttons">
-                <a href="#fechas" class="btn btn-primary">Boletos</a>
-                <a href="#conocenos" class="btn btn-secondary">Saber más</a>
-            </div>
-        </div>
-    </header>
+    <HeroSection />
 
     <!-- Countdown Section -->
-    <section class="countdown-section">
-        <div class="container">
-            <p class="section-tag">GIRA MÉXICO 2025</p>
-            <h2>Conciertos de música medicina</h2>
-
-            <div id="countdown" class="countdown-timer">
-                <div class="time-block">
-                    <span id="days">00</span>
-                    <label>Días</label>
-                </div>
-                <div class="time-block">
-                    <span id="hours">00</span>
-                    <label>Hrs</label>
-                </div>
-                <div class="time-block">
-                    <span id="minutes">00</span>
-                    <label>Min</label>
-                </div>
-                <div class="time-block">
-                    <span id="seconds">00</span>
-                    <label>Seg</label>
-                </div>
-            </div>
-
-            <div class="countdown-actions">
-                <a href="#reservar" class="btn btn-outline">Reservar</a>
-                <a href="#info" class="btn btn-primary">Más Info</a>
-            </div>
-        </div>
-    </section>
+    <CountdownSection />
 
     <!-- Tour Dates Section -->
-    <section id="fechas" class="dates-section">
-        <div class="container">
-            <div class="dates-list">
-                <!-- Date Item -->
-                <div class="date-item">
-                    <div class="date-info">
-                        <span class="day">02</span>
-                        <span class="month">ABRIL</span>
-                    </div>
-                    <div class="location-info">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>CDMX</h3>
-                        <p>Teatro de la Ciudad</p>
-                    </div>
-                    <a href="#" class="btn btn-small btn-gradient">Reservar</a>
-                </div>
-
-                <!-- Date Item -->
-                <div class="date-item">
-                    <div class="date-info">
-                        <span class="day">09</span>
-                        <span class="month">ABRIL</span>
-                    </div>
-                    <div class="location-info">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>MONTERREY</h3>
-                        <p>Auditorio Pabellón M</p>
-                    </div>
-                    <a href="#" class="btn btn-small btn-gradient">Reservar</a>
-                </div>
-
-                <!-- Date Item -->
-                <div class="date-item">
-                    <div class="date-info">
-                        <span class="day">16</span>
-                        <span class="month">ABRIL</span>
-                    </div>
-                    <div class="location-info">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>TULUM</h3>
-                        <p>Holistika</p>
-                    </div>
-                    <a href="#" class="btn btn-small btn-gradient">Reservar</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <TourDatesSection />
 
     <!-- Ceremonies Section -->
-    <section id="ceremonias" class="ceremonies-section">
-        <div class="container">
-            <h2 class="section-title">Ceremonias Ancestrales</h2>
-            <div class="cards-grid">
-                <!-- Card 1 -->
-                <div class="card">
-                    <div class="card-image" style="background-image: url('/image/principal/ceremonias/img1.png')">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-date">
-                            <span>03 al 05</span>
-                            <small>ABRIL 2025</small>
-                        </div>
-                        <h3>Retiro de Silencio</h3>
-                        <a href="#" class="btn btn-card">Ver más</a>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="card">
-                    <div class="card-image" style="background-image: url('/image/principal/ceremonias/img2.png');">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-date">
-                            <span>10 al 12</span>
-                            <small>ABRIL 2025</small>
-                        </div>
-                        <h3>Ceremonia de Cacao</h3>
-                        <a href="#" class="btn btn-card">Ver más</a>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="card">
-                    <div class="card-image" style="background-image: url('/image/principal/ceremonias/img3.png');">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-date">
-                            <span>05 al 08</span>
-                            <small>MAYO 2025</small>
-                        </div>
-                        <h3>Temazcal Tradicional</h3>
-                        <a href="#" class="btn btn-card">Ver más</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="center-btn">
-                <a href="#" class="btn btn-outline">Reservar</a>
-            </div>
-        </div>
-    </section>
+    <CeremoniesSection />
 
     <!-- Products Section -->
-    <section id="productos" class="products-section">
-        <div class="container">
-            <h2 class="section-title">Productos</h2>
-            <div class="products-grid">
-                <div class="product-item">
-                    <img src="/image/principal/discos/disco1.png" alt="Album 1">
-
-                </div>
-                <div class="product-item">
-                    <img src="/image/principal/discos/disco2.png" alt="Album 2">
-
-                </div>
-                <div class="product-item">
-                    <img src="/image/principal/discos/disco3.png" alt="Album 3">
-
-                </div>
-                <div class="product-item">
-                    <img src="/image/principal/discos/disco4.png" alt="Album 4">
-
-                </div>
-                <div class="product-item">
-                    <img src="/image/principal/discos/disco5.png" alt="Album 5">
-
-                </div>
-            </div>
-        </div>
-    </section>
+    <ProductsSection />
 
     <!-- Quote Section -->
-    <section class="quote-section">
-        <div class="overlay"></div>
-        <div class="container">
-            <blockquote>
-                "En el silencio de la tierra, las plantas maestras nos recuerdan quiénes somos."
-            </blockquote>
-        </div>
-    </section>
+    <QuoteSection />
 
     <!-- Gallery Section -->
-    <section id="galeria" class="gallery-section">
-        <div class="container">
-            <h2 class="section-title">Galería</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="/image/principal/galeria/image01.jpeg" alt="Gallery 1"></div>
-                <div class="gallery-item"><img src="/image/principal/galeria/image02.jpeg" alt="Gallery 2"></div>
-                <div class="gallery-item"><img src="/image/principal/galeria/image03.jpeg" alt="Gallery 3"></div>
-                <div class="gallery-item"><img src="/image/principal/galeria/image04.jpeg" alt="Gallery 4"></div>
-                <div class="gallery-item"><img src="/image/principal/galeria/image05.jpeg" alt="Gallery 5"></div>
-                <div class="gallery-item"><img src="/image/principal/galeria/image06.jpeg" alt="Gallery 6"></div>
-            </div>
-        </div>
-    </section>
+    <GallerySection />
 
     <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title">Testimonios</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="avatar">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
-                    </div>
-                    <p>"Una experiencia transformadora que tocó mi alma profundamente."</p>
-                    <h4>Ana García</h4>
-                </div>
-                <div class="testimonial-card">
-                    <div class="avatar">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
-                    </div>
-                    <p>"La música de Indios Beta es pura medicina para el corazón."</p>
-                    <h4>Carlos Ruiz</h4>
-                </div>
-                <div class="testimonial-card">
-                    <div class="avatar">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User">
-                    </div>
-                    <p>"Nunca había sentido una conexión tan fuerte en un concierto."</p>
-                    <h4>Sofia Luna</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-icons">
-                <i class="fas fa-om"></i>
-                <i class="fas fa-spa"></i>
-                <i class="fas fa-leaf"></i>
-                <i class="fas fa-moon"></i>
-            </div>
-            <p>&copy; 2025 Canto Que Une. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-			// Countdown Timer
-			const countdownDate = new Date("April 10, 2026 20:00:00").getTime();
-		
-			const updateCountdown = () => {
-				const now = new Date().getTime();
-				const distance = countdownDate - now;
-		
-				if (distance < 0) {
-					clearInterval(timerInterval);
-                    const daysEl = document.getElementById("days");
-                    const hoursEl = document.getElementById("hours");
-                    const minutesEl = document.getElementById("minutes");
-                    const secondsEl = document.getElementById("seconds");
-
-					if (daysEl) daysEl.innerText = "00";
-					if (hoursEl) hoursEl.innerText = "00";
-					if (minutesEl) minutesEl.innerText = "00";
-					if (secondsEl) secondsEl.innerText = "00";
-					return;
-				}
-		
-				const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-				const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-				const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-				const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-		
-                const daysEl = document.getElementById("days");
-                const hoursEl = document.getElementById("hours");
-                const minutesEl = document.getElementById("minutes");
-                const secondsEl = document.getElementById("seconds");
-
-				if (daysEl) daysEl.innerText = days < 10 ? `0${days}` : days.toString();
-				if (hoursEl) hoursEl.innerText = hours < 10 ? `0${hours}` : hours.toString();
-				if (minutesEl) minutesEl.innerText = minutes < 10 ? `0${minutes}` : minutes.toString();
-				if (secondsEl) secondsEl.innerText = seconds < 10 ? `0${seconds}` : seconds.toString();
-			};
-		
-			const timerInterval = setInterval(updateCountdown, 1000);
-			updateCountdown(); // Initial call
-		
-			// Mobile Menu Toggle
-			const mobileBtn = document.querySelector('.mobile-menu-btn') as HTMLElement | null;
-			const navLinks = document.querySelector('.nav-links') as HTMLElement | null;
-		
-			if (mobileBtn && navLinks) {
-				mobileBtn.addEventListener('click', () => {
-					const isVisible = navLinks.style.display === 'flex';
-		
-					if (isVisible) {
-						navLinks.style.display = 'none';
-					} else {
-						navLinks.style.display = 'flex';
-						navLinks.style.flexDirection = 'column';
-						navLinks.style.position = 'absolute';
-						navLinks.style.top = '100%';
-						navLinks.style.left = '0';
-						navLinks.style.width = '100%';
-						navLinks.style.background = 'rgba(5, 5, 16, 0.95)';
-						navLinks.style.padding = '20px';
-						navLinks.style.textAlign = 'center';
-					}
-				});
-			}
-		
-			// Navbar Scroll Effect
-			const navbar = document.querySelector('.navbar') as HTMLElement | null;
-		
-			if (navbar) {
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 50) {
-                        navbar.classList.add('visible');
-                        navbar.style.padding = '10px 0';
-                        navbar.style.background = 'rgba(5, 5, 16, 0.95)';
-                    } else {
-                        navbar.classList.remove('visible');
-                        navbar.style.padding = '20px 0';
-                        navbar.style.background = 'rgba(5, 5, 16, 0.8)';
-                    }
-                });
-            }
-		});
-    </script>
+    <TestimonialsSection />
 </Layout>

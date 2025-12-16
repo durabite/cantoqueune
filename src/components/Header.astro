@@ -1,0 +1,75 @@
+---
+
+---
+
+<nav class="navbar">
+    <div class="container">
+        <a href="#" class="logo">
+            <img
+                src="/logo-cantoqueuneS.svg"
+                alt="Canto Que Une"
+                width="250"
+                height="100"
+            />
+        </a>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#fechas">Fechas</a>
+            <a href="#ceremonias">Ceremonias</a>
+            <a href="#productos">Productos</a>
+            <a href="#galeria">Galería</a>
+        </div>
+        <button class="btn btn-outline mobile-menu-btn"
+            ><i class="fas fa-bars"></i></button
+        >
+    </div>
+</nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Mobile Menu Toggle
+        const mobileBtn = document.querySelector(
+            ".mobile-menu-btn",
+        ) as HTMLElement | null;
+        const navLinks = document.querySelector(
+            ".nav-links",
+        ) as HTMLElement | null;
+
+        if (mobileBtn && navLinks) {
+            mobileBtn.addEventListener("click", () => {
+                const isVisible = navLinks.style.display === "flex";
+
+                if (isVisible) {
+                    navLinks.style.display = "none";
+                } else {
+                    navLinks.style.display = "flex";
+                    navLinks.style.flexDirection = "column";
+                    navLinks.style.position = "absolute";
+                    navLinks.style.top = "100%";
+                    navLinks.style.left = "0";
+                    navLinks.style.width = "100%";
+                    navLinks.style.background = "rgba(5, 5, 16, 0.95)";
+                    navLinks.style.padding = "20px";
+                    navLinks.style.textAlign = "center";
+                }
+            });
+        }
+
+        // Navbar Scroll Effect
+        const navbar = document.querySelector(".navbar") as HTMLElement | null;
+
+        if (navbar) {
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("visible");
+                    navbar.style.padding = "10px 0";
+                    navbar.style.background = "rgba(5, 5, 16, 0.95)";
+                } else {
+                    navbar.classList.remove("visible");
+                    navbar.style.padding = "20px 0";
+                    navbar.style.background = "rgba(5, 5, 16, 0.8)";
+                }
+            });
+        }
+    });
+</script>
