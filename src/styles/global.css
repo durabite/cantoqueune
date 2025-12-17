@@ -98,7 +98,7 @@
     --text-white: #ffffff;
     --text-gray: #b3b3b3;
     --gradient-main: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    --font-heading: 'Cinzel', serif;
+    --font-heading: 'Golos Text', sans-serif;
     --font-body: 'Golos Text', sans-serif;
     --transition: all 0.3s ease;
 }
@@ -176,7 +176,7 @@ h4 {
 .btn {
     display: inline-block;
     padding: 12px 30px;
-    border-radius: 50px;
+    border-radius: 12px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -296,143 +296,10 @@ h4 {
     padding: 8px 12px;
 }
 
-/* Hero Section */
-.hero {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: var(--bg-dark);
-    overflow: hidden;
-}
 
-.hero-video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.hero-video-bg video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    opacity: 0.8;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(5, 5, 16, 0.5), var(--bg-dark));
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    padding-top: 60px;
-}
-
-.hero-logo {
-    max-width: 200px;
-    /* Adjust size as needed */
-    margin: 0 auto 30px;
-    filter: drop-shadow(0 0 10px rgba(176, 0, 176, 0.5));
-    /* Add a subtle glow */
-}
-
-.main-title {
-    font-size: 4rem;
-    line-height: 1.1;
-    margin-bottom: 40px;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.small-block {
-    display: block;
-    font-size: 1.2rem;
-    font-family: var(--font-body);
-    font-weight: 300;
-    margin-bottom: 10px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
 
 /* Countdown Section */
-.countdown-section {
-    padding: 80px 0;
-    text-align: center;
-    background: linear-gradient(to bottom, var(--bg-dark), #0f0f2d);
-}
 
-.section-tag {
-    color: var(--primary-color);
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-}
-
-.countdown-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-}
-
-.countdown-timer {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-.time-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.time-block span {
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1;
-    background: var(--gradient-main);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: var(--font-heading);
-}
-
-.time-block label {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    color: var(--text-gray);
-}
-
-.countdown-actions {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
 
 /* Dates Section */
 .dates-section {
@@ -758,9 +625,9 @@ h4 {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .main-title {
+    /* .main-title {
         font-size: 2.5rem;
-    }
+    } */
 
     .nav-links {
         display: none;
@@ -770,13 +637,7 @@ h4 {
         display: block;
     }
 
-    .countdown-timer {
-        gap: 15px;
-    }
 
-    .time-block span {
-        font-size: 2rem;
-    }
 
     .date-item {
         flex-direction: column;

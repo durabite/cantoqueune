@@ -4,7 +4,11 @@
 
 <section class="countdown-section">
     <div class="container">
-        <p class="section-tag">GIRA MÉXICO 2025</p>
+        <p
+            class="text-2xl font-bold tracking-[0.2em] mb-4 uppercase text-[var(--primary-color)]"
+        >
+            GIRA MÉXICO 2025
+        </p>
         <h2>Conciertos de música medicina</h2>
 
         <div id="countdown" class="countdown-timer">
@@ -86,3 +90,65 @@
         updateCountdown(); // Initial call
     });
 </script>
+
+<style>
+    .countdown-section {
+        padding: 80px 0;
+        text-align: center;
+        background: linear-gradient(to bottom, var(--bg-dark), #0f0f2d);
+    }
+
+    .countdown-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+    }
+
+    .countdown-timer {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .time-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .time-block span {
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1;
+        background: var(--gradient-main);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: var(--font-heading);
+    }
+
+    .time-block label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        color: var(--text-gray);
+    }
+
+    .countdown-actions {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .countdown-timer {
+            gap: 15px;
+        }
+
+        .time-block span {
+            font-size: 2rem;
+        }
+    }
+</style>

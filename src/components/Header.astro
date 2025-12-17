@@ -4,9 +4,9 @@ import { Menu } from "lucide-react";
 import "@/styles/global.css";
 ---
 
-<nav
+<header
     class="fixed top-0 left-0 w-full z-[1000] transition-transform duration-300 ease-in-out border-b border-white/5 bg-[#050510]/75 backdrop-blur-md py-6 md:py-10 -translate-y-full shadow-lg"
-    id="main-nav"
+    id="main-header"
 >
     <div
         class="container mx-auto px-8 md:px-12 flex justify-between items-center max-w-[1200px]"
@@ -22,7 +22,7 @@ import "@/styles/global.css";
         </a>
 
         <!-- Desktop Nav -->
-        <div class="hidden md:flex gap-8 items-center">
+        <nav class="hidden md:flex gap-8 items-center">
             <a
                 href="#inicio"
                 class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all"
@@ -48,7 +48,7 @@ import "@/styles/global.css";
                 class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all"
                 >Galería</a
             >
-        </div>
+        </nav>
 
         <!-- Mobile Menu Button -->
         <Button
@@ -89,13 +89,13 @@ import "@/styles/global.css";
             class="nav-link text-sm uppercase tracking-widest py-2">Galería</a
         >
     </div>
-</nav>
+</header>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const mobileBtn = document.getElementById("mobile-menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
-        const navbar = document.getElementById("main-nav");
+        const header = document.getElementById("main-header");
 
         // Toggle Mobile Menu
         if (mobileBtn && mobileMenu) {
@@ -115,14 +115,14 @@ import "@/styles/global.css";
         }
 
         // Navbar Scroll Effect
-        if (navbar) {
+        if (header) {
             const handleScroll = () => {
                 if (window.scrollY > 100) {
-                    navbar.classList.remove("-translate-y-full");
-                    navbar.classList.add("translate-y-0");
+                    header.classList.remove("-translate-y-full");
+                    header.classList.add("translate-y-0");
                 } else {
-                    navbar.classList.add("-translate-y-full");
-                    navbar.classList.remove("translate-y-0");
+                    header.classList.add("-translate-y-full");
+                    header.classList.remove("translate-y-0");
                     mobileMenu?.classList.add("hidden"); // Also hide mobile menu if open
                     mobileMenu?.classList.remove("flex");
                 }
