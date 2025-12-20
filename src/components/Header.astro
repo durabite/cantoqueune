@@ -1,6 +1,6 @@
 ---
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, FlameKindling, Guitar, Disc3, Camera } from "lucide-react";
 import "@/styles/global.css";
 ---
 
@@ -25,28 +25,36 @@ import "@/styles/global.css";
         <nav class="hidden md:flex gap-8 items-center">
             <a
                 href="#inicio"
-                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all"
+                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all flex items-center gap-2"
                 >Inicio</a
             >
             <a
                 href="#fechas"
-                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all"
-                >Fechas</a
+                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all flex items-center gap-2"
+            >
+                <Guitar className="w-4 h-4" />
+                Conciertos</a
             >
             <a
-                href="#ceremonias"
-                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all"
-                >Ceremonias</a
+                href="#paquetes"
+                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all flex items-center gap-2"
+            >
+                <FlameKindling className="w-4 h-4" />
+                Ceremonias</a
             >
             <a
                 href="#productos"
-                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all"
-                >Productos</a
+                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all flex items-center gap-2"
+            >
+                <Disc3 className="w-4 h-4" />
+                Productos</a
             >
             <a
                 href="#galeria"
-                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all"
-                >Galería</a
+                class="nav-link text-sm uppercase tracking-widest opacity-80 transition-all flex items-center gap-2"
+            >
+                <Camera className="w-4 h-4" />
+                Galería</a
             >
         </nav>
 
@@ -147,5 +155,13 @@ import "@/styles/global.css";
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+    }
+
+    /* Ensure icons get a color since 'color: transparent' hides them */
+    .nav-link:hover :global(svg) {
+        stroke: var(
+            --accent-color
+        ); /* Or a specific color from your gradient like #b000b0 */
+        filter: drop-shadow(0 0 2px rgba(176, 0, 176, 0.5));
     }
 </style>

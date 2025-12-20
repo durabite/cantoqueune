@@ -301,84 +301,7 @@ h4 {
 /* Countdown Section */
 
 
-/* Dates Section */
-.dates-section {
-    padding: 80px 0;
-    background-image: url("/image/principal/conciertos/bg-fechas.png");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
 
-.dates-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(5, 5, 16, 0.85);
-}
-
-.dates-list {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.date-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition);
-}
-
-.date-item:hover {
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.date-info {
-    text-align: center;
-    min-width: 80px;
-}
-
-.date-info .day {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.date-info .month {
-    font-size: 0.8rem;
-    color: var(--primary-color);
-    font-weight: 700;
-}
-
-.location-info {
-    flex: 1;
-    padding: 0 30px;
-}
-
-.location-info i {
-    color: var(--accent-color);
-    margin-right: 10px;
-}
-
-.location-info h3 {
-    display: inline-block;
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
-.location-info p {
-    color: var(--text-gray);
-    font-size: 0.9rem;
-    margin-left: 25px;
-}
 
 /* Ceremonies Section */
 .ceremonies-section {
@@ -516,42 +439,7 @@ h4 {
     font-style: italic;
 }
 
-/* Gallery Section */
-.gallery-section {
-    padding: 100px 0;
-    background-image: url("/image/principal/galeria/textura.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
-}
 
-.gallery-section .section-title {
-    color: var(--bg-white);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.gallery-item {
-    height: 250px;
-    overflow: hidden;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
 
 /* Testimonials Section */
 .testimonials-section {
@@ -639,19 +527,6 @@ h4 {
 
 
 
-    .date-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .location-info {
-        padding: 0;
-    }
-
-    .location-info p {
-        margin-left: 0;
-    }
 
     .quote-section blockquote {
         font-size: 1.5rem;
