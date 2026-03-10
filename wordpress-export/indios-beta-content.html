@@ -1,0 +1,475 @@
+<!-- CONTENEDOR PRINCIPAL: Sin padding para permitir full-width en secciones -->
+<style>
+    /* =========================================
+       1. RESET GENERAL (Copiado de bloque-definitivo-total.html)
+       ========================================= */
+    body,
+    html,
+    .wp-site-blocks,
+    .entry-content {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .wp-block-shortcode,
+    p {
+        margin-block-start: 0 !important;
+        margin-block-end: 0 !important;
+        line-height: inherit !important;
+    }
+
+    #main-header {
+        top: 0 !important;
+    }
+
+    .admin-bar #main-header {
+        top: 32px !important;
+    }
+
+    @media screen and (max-width: 782px) {
+        .admin-bar #main-header {
+            top: 46px !important;
+        }
+    }
+</style>
+<div class="indios-beta-page" style="background-color: #050510; color: white; padding: 0;">
+
+    <!-- 1. SOBRE INDIOS BETA -->
+    <section class="seccion-nosotros" style="padding: 40px 20px; max-width: 900px; margin: 0 auto; text-align: center;">
+        <h2
+            style="font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; color: white; position: relative; display: inline-block;">
+            Sobre Indios Beta
+            <span
+                style="display: block; width: 60px; height: 3px; background: linear-gradient(90deg, #b000b0, #6000ff); margin: 10px auto 0; border-radius: 2px;"></span>
+        </h2>
+
+        <div style="font-size: 1.125rem; line-height: 1.6; color: #b3b3b3; text-align: left;">
+            <p style="margin-bottom: 20px;">
+                La agrupación <strong>Indios Beta</strong> presenta su propuesta inspirada por las culturas originarias
+                de América y del mundo, en un viaje sonoro desde diversos territorios para compartir temas
+                instrumentales, serenos y meditativos, hasta canciones alegóricas a la vida, de celebración y de
+                conexión con la naturaleza.
+            </p>
+            <p style="margin-bottom: 20px;">
+                Este ensamble musical radicado en Madrid desde 2015, agrupa una variedad de músicos de alta calidad
+                interpretativa, con profundidad genuina en su conexión con la ancestralidad para la elevación del ser
+                humano de los tiempos actuales, en mente, alma y corazón.
+            </p>
+            <p>
+                La sonoridad étnica en diálogo armónico con elementos contemporáneos cobra vida con más de veinte
+                instrumentos en escena como charango, guitarra, zampoña, quena, didgeridoo y percusiones, por nombrar
+                algunos en su dimensión más acústica, a lo que se suman otros como teclados, baterías, bajo y guitarra
+                eléctrica en su formato de big band.
+            </p>
+        </div>
+    </section>
+
+    <!-- =========================================
+     ceremonias SECTION
+     ========================================= -->
+    <section id="paquetes" class="seccion-ceremonias"
+        style="padding: 6rem 0; background-size: cover; background-position: center; background-attachment: fixed; background-image: linear-gradient(rgba(5, 5, 16, 0.9), rgba(5, 5, 16, 0.8)), url('/image/principal/ceremonias/ceremonias.png');">
+        <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
+            <h2
+                style="text-align: center; font-size: 2.5rem; font-weight: 700; margin-bottom: 4rem; position: relative; padding-bottom: 1rem; color: white;">
+                Paquetes Disponibles
+                <span
+                    style="display: block; width: 60px; height: 3px; background: linear-gradient(90deg, #b000b0, #6000ff); margin: 0.5rem auto 0; border-radius: 2px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);"></span>
+            </h2>
+            <!-- Grid: Custom CSS Controlled Layout (Spanish Classes - Flexible Version) -->
+            <style>
+                /* Estilos Flexibles (Versión Robusta Original) */
+                #paquetes .contenedor-paquetes {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 30px;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                #paquetes .item-paquete {
+                    flex: 1 1 290px;
+                    min-width: 280px;
+                    max-width: 500px;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0;
+                }
+            </style>
+            <!-- Grid: Custom CSS Controlled Layout (Spanish Classes) -->
+            <div class="contenedor-paquetes" style="margin: 0 auto; box-sizing: border-box;">
+
+                <!-- Package 1: CONCIERTO -->
+                <div class="item-paquete"
+                    style="background-color: rgba(18, 18, 37, 0.8); border: 2px solid #b000b0; box-shadow: 0 0 20px rgba(176,0,176,0.2); border-radius: 1.5rem; padding: 2rem; position: relative; overflow: hidden; transition: transform 0.3s ease; z-index: 10; display: flex; flex-direction: column; box-sizing: border-box;"
+                    onmouseover="this.style.transform='scale(1.05) translateY(-8px)'"
+                    onmouseout="this.style.transform='scale(1) translateY(0)'">
+
+                    <div
+                        style="text-align: center; margin-bottom: 2rem; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.1); min-height: 140px; display: flex; flex-direction: column; justify-content: flex-start;">
+                        <div
+                            style="display: flex; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; color: #b000b0;">
+                            <i class="fas fa-guitar fa-2x"></i>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin: 0 0 0.5rem 0; color: white;">Concierto
+                        </h3>
+                        <p style="color: #b3b3b3; font-size: 0.875rem; margin: 0; line-height: 1.4;">Disfruta de la
+                            música medicina en vivo.</p>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <!-- Fase 1 -->
+                        <div
+                            style="background-color: rgba(255,255,255,0.05); padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: space-between;">
+                            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                                <span
+                                    style="font-weight: 700; color: gold; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Fase
+                                    1</span>
+                                <span
+                                    style="font-size: 0.75rem; color: #b3b3b3; background-color: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px; margin-top: 4px;">Preventa</span>
+                            </div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: white;">$600 <span
+                                    style="font-size: 0.875rem; font-weight: 400; color: #b3b3b3;">MXN</span></div>
+                        </div>
+                        <!-- Fase 2 -->
+                        <div
+                            style="background-color: rgba(255,255,255,0.05); padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: space-between;">
+                            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                                <span
+                                    style="font-weight: 700; color: gold; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Fase
+                                    2</span>
+                                <span
+                                    style="font-size: 0.75rem; color: #b3b3b3; background-color: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px; margin-top: 4px;">Venta
+                                    General</span>
+                            </div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: white;">$800 <span
+                                    style="font-size: 0.875rem; font-weight: 400; color: #b3b3b3;">MXN</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2: RETIRO (Nuevo) -->
+                <div class="item-paquete"
+                    style="background-color: rgba(18, 18, 37, 0.8); border: 2px solid #b000b0; box-shadow: 0 0 20px rgba(176,0,176,0.2); border-radius: 1.5rem; padding: 2rem; position: relative; overflow: hidden; transition: transform 0.3s ease; z-index: 10; display: flex; flex-direction: column; box-sizing: border-box;"
+                    onmouseover="this.style.transform='scale(1.05) translateY(-8px)'"
+                    onmouseout="this.style.transform='scale(1) translateY(0)'">
+
+                    <div
+                        style="text-align: center; margin-bottom: 2rem; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.1); min-height: 140px; display: flex; flex-direction: column; justify-content: flex-start;">
+                        <div
+                            style="display: flex; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; color: #b000b0;">
+                            <i class="fas fa-fire fa-2x"></i>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin: 0 0 0.5rem 0; color: white;">Retiro</h3>
+                        <p style="color: #b000b0; font-size: 0.875rem; font-weight: 700; margin: 0; line-height: 1.4;">
+                            Reserva desde $2,000</p>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <!-- Fase 1 -->
+                        <div
+                            style="background-color: rgba(255,255,255,0.05); padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.05); display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; justify-content: space-between;">
+                            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                                <span
+                                    style="font-weight: 700; color: gold; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Fase
+                                    1</span>
+                                <span
+                                    style="font-size: 0.75rem; color: #b3b3b3; background-color: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px; margin-top: 4px;">Preventa</span>
+                            </div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: white;">$6,000 <span
+                                    style="font-size: 0.875rem; font-weight: 400; color: #b3b3b3;">MXN</span></div>
+                        </div>
+                        <!-- Fase 2 -->
+                        <div
+                            style="background-color: rgba(255,255,255,0.05); padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.05); display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; justify-content: space-between;">
+                            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                                <span
+                                    style="font-weight: 700; color: gold; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Fase
+                                    2</span>
+                                <span
+                                    style="font-size: 0.75rem; color: #b3b3b3; background-color: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px; margin-top: 4px;">Venta
+                                    General</span>
+                            </div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: white;">$7,000 <span
+                                    style="font-size: 0.875rem; font-weight: 400; color: #b3b3b3;">MXN</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3: RETIRO + CONCIERTO -->
+                <div class="item-paquete"
+                    style="background-color: rgba(18, 18, 37, 0.8); border: 2px solid #b000b0; box-shadow: 0 0 20px rgba(176,0,176,0.2); border-radius: 1.5rem; padding: 2rem; position: relative; overflow: hidden; transition: transform 0.3s ease; z-index: 10; display: flex; flex-direction: column; box-sizing: border-box;"
+                    onmouseover="this.style.transform='scale(1.05) translateY(-8px)'"
+                    onmouseout="this.style.transform='scale(1) translateY(0)'">
+
+                    <div
+                        style="text-align: center; margin-bottom: 2rem; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.1); min-height: 140px; display: flex; flex-direction: column; justify-content: flex-start;">
+                        <div
+                            style="display: flex; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; color: #b000b0;">
+                            <i class="fas fa-fire fa-2x"></i>
+                            <i class="fas fa-guitar fa-2x"></i>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin: 0 0 0.5rem 0; color: white;">Retiro +
+                            Concierto</h3>
+                        <p style="color: #b000b0; font-size: 0.875rem; font-weight: 700; margin: 0; line-height: 1.4;">
+                            Reserva desde $2,500</p>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <!-- Fase 1 -->
+                        <div
+                            style="background-color: rgba(255,255,255,0.05); padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.05); display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; justify-content: space-between;">
+                            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                                <span
+                                    style="font-weight: 700; color: gold; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Fase
+                                    1</span>
+                                <span
+                                    style="font-size: 0.75rem; color: #b3b3b3; background-color: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px; margin-top: 4px;">Preventa</span>
+                            </div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: white;">$6,500 <span
+                                    style="font-size: 0.875rem; font-weight: 400; color: #b3b3b3;">MXN</span></div>
+                        </div>
+                        <!-- Fase 2 -->
+                        <div
+                            style="background-color: rgba(255,255,255,0.05); padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.05); display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; justify-content: space-between;">
+                            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                                <span
+                                    style="font-weight: 700; color: gold; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em;">Fase
+                                    2</span>
+                                <span
+                                    style="font-size: 0.75rem; color: #b3b3b3; background-color: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px; margin-top: 4px;">Venta
+                                    General</span>
+                            </div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: white;">$7,600 <span
+                                    style="font-size: 0.875rem; font-weight: 400; color: #b3b3b3;">MXN</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- 3. CONCIERTOS (Filtrado: Sin fecha 25 Abril, Sin header rojo, doble botón) -->
+    <section id="fechas" style="padding: 20px 0; position: relative;">
+        <!-- Se mantiene el código de conciertos que ya funcionaba bien -->
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h2 style="text-align: center; font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; color: white;">
+                Boletos
+                <span
+                    style="display: block; width: 60px; height: 3px; background: linear-gradient(90deg, #b000b0, #6000ff); margin: 10px auto 0; border-radius: 2px;"></span>
+            </h2>
+
+            <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 0;">
+
+                <!-- MORELOS -->
+                <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 20px 0; transition: background 0.3s; text-align: center;"
+                    onmouseover="this.style.backgroundColor='rgba(255,255,255,0.05)'"
+                    onmouseout="this.style.backgroundColor='transparent'">
+                    <div style="text-align: center; min-width: 80px;">
+                        <span
+                            style="display: block; font-size: 2.5rem; font-weight: 700; line-height: 1; color: #ffffff;">02</span>
+                        <span
+                            style="display: block; font-size: 0.875rem; font-weight: 700; color: #b000b0; text-transform: uppercase;">ABRIL</span>
+                    </div>
+                    <div style="flex-grow: 1; min-width: 200px; padding: 0 10px;">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                            <i class="fas fa-map-marker-alt" style="color: #FFD700; font-size: 1.25rem;"></i>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; color: white; margin: 0;">MORELOS</h3>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                        <a href="https://mpago.la/25BMbco" target="_blank"
+                            style="display: inline-flex;  align-items: center; justify-content: center; text-decoration: none; background: linear-gradient(135deg, #b000b0, #6000ff); width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(176,0,176,0.4); text-align: center;">CONCIERTO</a>
+                        <a href="https://mpago.li/2X2v847" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: background 0.3s;"
+                            onmouseover="this.style.backgroundColor='#b000b0'"
+                            onmouseout="this.style.backgroundColor='transparent'">RETIRO</a>
+                        <a href="https://mpago.la/2CfKnWR" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 160px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: background 0.3s;"
+                            onmouseover="this.style.backgroundColor='#b000b0'"
+                            onmouseout="this.style.backgroundColor='transparent'">RETIRO + CONCIERTO</a>
+                    </div>
+                </div>
+
+                <!-- MONTERREY -->
+                <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 20px 0; transition: background 0.3s; text-align: center;"
+                    onmouseover="this.style.backgroundColor='rgba(255,255,255,0.05)'"
+                    onmouseout="this.style.backgroundColor='transparent'">
+                    <div style="text-align: center; min-width: 80px;">
+                        <span
+                            style="display: block; font-size: 2.5rem; font-weight: 700; line-height: 1; color: #ffffff;">09</span>
+                        <span
+                            style="display: block; font-size: 0.875rem; font-weight: 700; color: #b000b0; text-transform: uppercase;">ABRIL</span>
+                    </div>
+                    <div style="flex-grow: 1; min-width: 200px; padding: 0 10px;">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                            <i class="fas fa-map-marker-alt" style="color: #FFD700; font-size: 1.25rem;"></i>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; color: white; margin: 0;">MONTERREY</h3>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                        <a href="https://mpago.li/17z4kGn" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: linear-gradient(135deg, #b000b0, #6000ff); width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(176,0,176,0.4); text-align: center;">CONCIERTO</a>
+                        <a href="https://mpago.li/2ime1wu" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: background 0.3s;"
+                            onmouseover="this.style.backgroundColor='#b000b0'"
+                            onmouseout="this.style.backgroundColor='transparent'">RETIRO</a>
+                        <a href="https://mpago.la/2stk7YT" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 160px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: background 0.3s;"
+                            onmouseover="this.style.backgroundColor='#b000b0'"
+                            onmouseout="this.style.backgroundColor='transparent'">RETIRO + CONCIERTO</a>
+                    </div>
+                </div>
+
+                <!-- MÉRIDA -->
+                <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 20px 0; transition: background 0.3s; text-align: center;"
+                    onmouseover="this.style.backgroundColor='rgba(255,255,255,0.05)'"
+                    onmouseout="this.style.backgroundColor='transparent'">
+                    <div style="text-align: center; min-width: 80px;">
+                        <span
+                            style="display: block; font-size: 2.5rem; font-weight: 700; line-height: 1; color: #ffffff;">16</span>
+                        <span
+                            style="display: block; font-size: 0.875rem; font-weight: 700; color: #b000b0; text-transform: uppercase;">ABRIL</span>
+                    </div>
+                    <div style="flex-grow: 1; min-width: 200px; padding: 0 10px;">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                            <i class="fas fa-map-marker-alt" style="color: #FFD700; font-size: 1.25rem;"></i>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; color: white; margin: 0;">MÉRIDA</h3>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                        <a href="https://mpago.li/2meTSeG" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: linear-gradient(135deg, #b000b0, #6000ff); width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(176,0,176,0.4); text-align: center;">CONCIERTO</a>
+                        <a href="https://mpago.li/1Wb2hv8" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: background 0.3s;"
+                            onmouseover="this.style.backgroundColor='#b000b0'"
+                            onmouseout="this.style.backgroundColor='transparent'">RETIRO</a>
+                        <a href="https://mpago.la/23o2bjE" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 160px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: background 0.3s;"
+                            onmouseover="this.style.backgroundColor='#b000b0'"
+                            onmouseout="this.style.backgroundColor='transparent'">RETIRO + CONCIERTO</a>
+                    </div>
+                </div>
+
+                <!-- CONCIERTO ESPECIAL (25 ABRIL) -->
+                <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 20px 0; transition: background 0.3s; text-align: center;"
+                    onmouseover="this.style.backgroundColor='rgba(255,255,255,0.05)'"
+                    onmouseout="this.style.backgroundColor='transparent'">
+                    <div style="text-align: center; min-width: 80px;">
+                        <span
+                            style="display: block; font-size: 2.5rem; font-weight: 700; line-height: 1; color: #ffffff;">25</span>
+                        <span
+                            style="display: block; font-size: 0.875rem; font-weight: 700; color: #b000b0; text-transform: uppercase;">ABRIL</span>
+                    </div>
+                    <div style="flex-grow: 1; min-width: 200px; padding: 0 10px;">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                            <i class="fas fa-map-marker-alt" style="color: #FFD700; font-size: 1.25rem;"></i>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; color: white; margin: 0;">CDMX</h3>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                        <a href="https://mpago.la/1Z2xfq3" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: linear-gradient(135deg, #b000b0, #6000ff); width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(176,0,176,0.4); text-align: center;">CONCIERTO</a>
+                        <a href="#"
+                            style="visibility: hidden; pointer-events: none; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center;">RETIRO</a>
+                        <a href="#"
+                            style="visibility: hidden; pointer-events: none; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 160px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center;">RETIRO
+                            + CONCIERTO</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3.5 SECCIÓN DE PAGO DEL RETIRO A MESES -->
+    <section id="retiro-meses" style="padding: 20px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
+
+            <!-- Caja con estilo outline y fondo semitransparente -->
+            <div
+                style="max-width: 600px; margin: 0 auto; padding: 40px; border: 2px solid #b000b0; border-radius: 1.5rem; background-color: rgba(0, 0, 0, 0.33); box-shadow: 0 0 20px rgba(176,0,176,0.1);">
+
+                <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; color: white;">
+                    Retiro
+                </h2>
+
+                <h3 style="font-size: 1.5rem; font-weight: 500; margin-bottom: 30px; color: #b3b3b3;">
+                    Paga a Meses
+                    <span
+                        style="display: block; width: 60px; height: 3px; background: linear-gradient(90deg, #b000b0, #6000ff); margin: 10px auto 0; border-radius: 2px;"></span>
+                </h3>
+
+                <a href="https://mpago.li/1vE5oiC" target="_blank"
+                    style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: linear-gradient(135deg, #b000b0, #6000ff); width: 160px; height: 45px; font-size: 0.85rem; line-height: 1; padding: 0; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(176,0,176,0.4); text-align: center; transition: transform 0.2s;"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    RETIRO MESES
+                </a>
+
+                <div style="margin-top: 20px;">
+                    <p style="color: #b3b3b3; font-size: 0.9rem; margin-bottom: 10px;">Cualquier tarjeta bancaria</p>
+                    <div style="display: flex; justify-content: center; gap: 15px; font-size: 2rem; color: #fff;">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PRODUCTOS -->
+    <section id="productos" style="padding: 20px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
+            <h2
+                style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: white; position: relative; display: inline-block;">
+                Productos
+                <span
+                    style="display: block; width: 60px; height: 3px; background: linear-gradient(90deg, #b000b0, #6000ff); margin: 10px auto 0; border-radius: 2px;"></span>
+            </h2>
+            <p style="color: #b3b3b3; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 24px;">
+                Discografía Indios Beta</p>
+
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 32px; margin-bottom: 24px;">
+                <div style="width: 180px; text-align: center; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/image/principal/discos/disco1.png" alt="Album 1"
+                        style="width: 100%; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); margin-bottom: 16px;" />
+                </div>
+                <div style="width: 180px; text-align: center; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/image/principal/discos/disco2.png" alt="Album 2"
+                        style="width: 100%; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); margin-bottom: 16px;" />
+                </div>
+                <div style="width: 180px; text-align: center; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/image/principal/discos/disco3.png" alt="Album 3"
+                        style="width: 100%; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); margin-bottom: 16px;" />
+                </div>
+                <div style="width: 180px; text-align: center; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/image/principal/discos/disco4.png" alt="Album 4"
+                        style="width: 100%; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); margin-bottom: 16px;" />
+                </div>
+                <div style="width: 180px; text-align: center; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/image/principal/discos/disco5.png" alt="Album 5"
+                        style="width: 100%; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); margin-bottom: 16px;" />
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="https://indiosbetaofficial.bandcamp.com/" target="_blank"
+                    style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: linear-gradient(135deg, #b000b0, #6000ff); width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(176,0,176,0.4); text-align: center;">
+                    COMPRAR
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+</div>

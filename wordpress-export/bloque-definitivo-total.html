@@ -1,0 +1,806 @@
+<!-- CÓDIGO MAESTRO V12.0: Layout Fechas CSS Puro (Inrompible) -->
+
+<style>
+    /* =========================================
+       1. RESET GENERAL
+       ========================================= */
+    body,
+    html,
+    .wp-site-blocks,
+    .entry-content {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .wp-block-shortcode,
+    p {
+        margin-block-start: 0 !important;
+        margin-block-end: 0 !important;
+        line-height: inherit !important;
+    }
+
+    #main-header {
+        top: 0 !important;
+    }
+
+    .admin-bar #main-header {
+        top: 32px !important;
+    }
+
+    @media screen and (max-width: 782px) {
+        .admin-bar #main-header {
+            top: 46px !important;
+        }
+    }
+
+    /* =========================================
+       2. LAYOUT FECHAS RESPONSIVE (CSS PURO)
+       ========================================= */
+    /* Base Mobile: Apilado y Centrado */
+    .canto-date-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        gap: 1.5rem;
+    }
+
+    .canto-date-col-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .canto-location-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .canto-dates-wrapper {
+        max-width: 1440px;
+        width: 100%;
+    }
+
+    .canto-city-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
+        color: white;
+    }
+
+    /* Base Mobile: Botones envuelven y se centran */
+    .canto-date-col-btn {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    /* Desktop: Fila Horizontal (3 Columnas) */
+    @media (min-width: 768px) {
+        .canto-date-row {
+            flex-direction: row;
+            /* Fila */
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            /* Texto a la izquierda */
+            padding: 2rem;
+        }
+
+        .canto-date-col-date {
+            min-width: 90px;
+            /* Ancho fijo menor para fecha */
+            text-align: center;
+        }
+
+        .canto-date-col-info {
+            flex: 1 1 0%;
+            /* Absorbe todo el espacio extra basándose en un mínimo de 0, para que todos partan del mismo punto */
+            min-width: 0;
+            /* Permite comprimir texto largo como CDMX sin descuadrar botones */
+            align-items: flex-start;
+            /* Alinea todo a la izquierda */
+            padding-left: 1rem;
+            /* Espacio menor con la fecha */
+            padding-right: 1rem;
+        }
+
+        .canto-date-col-btn {
+            flex: 0 0 auto;
+            width: auto !important;
+            /* Resetea el ancho 100% heredado de la vista móvil crucialmente */
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            /* Asegura la separación entre botones */
+            flex-wrap: nowrap;
+            /* Fuerza una sola línea */
+        }
+
+        .canto-location-header {
+            justify-content: flex-start;
+            /* Icono y Ciudad a la izquierda */
+        }
+
+        .canto-date-col-info p {
+            margin-left: 1.5rem;
+            /* Indentación ligera para la ubicación chica si se desea */
+            margin-top: 0.25rem;
+        }
+    }
+</style>
+
+<!-- Llamada al Header -->
+[canto_header]
+
+<!-- =========================================
+     HERO SECTION
+     ========================================= -->
+<section id="inicio"
+    class="hero relative w-full h-screen flex items-center justify-center text-center bg-[#050510] overflow-hidden">
+    <div class="hero-video-bg absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+        <img src="/image/principal/bg-supp/BG-Hero.gif" alt="Fondo Hero"
+            class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2 opacity-60">
+    </div>
+    <div class="hero-overlay absolute top-0 left-0 w-full h-full z-1"
+        style="background: linear-gradient(to bottom, rgba(5, 5, 16, 0.2), #050510);"></div>
+
+    <div class="container hero-content relative z-10 pt-[10px] px-5 flex flex-col items-center" style="gap: 10px;">
+        <img src="/image/logo-cantoqueuneG.svg" alt="Canto Que Une"
+            style="max-width: 380px; width: 100%; height: auto; margin-bottom: 25px !important; display: block;"
+            class="hero-logo mx-auto drop-shadow-[0_0_10px_rgba(176,0,176,0.5)]" />
+
+        <p class="text-white font-light mx-auto"
+            style="font-size: 1rem; margin-bottom: 25px !important; display: block; max-width: 700px; line-height: 1.5;">
+            Canto Que Une es un espacio donde la música, la voz y la intención se encuentran.
+            <br>Un ritual sonoro que conecta cuerpos, memorias y corazones en un mismo pulso.
+        </p>
+
+        <p class="text-sm uppercase tracking-[0.3em] text-white/80 font-light"
+            style="margin-bottom: 5px !important; display: block;">
+            PRESENTA
+        </p>
+
+        <span class="block font-sans text-white"
+            style="font-size: 2.25rem; font-weight: bold !important; line-height: 1.2; text-shadow: 0 0 10px rgba(0,0,0,0.5); margin-bottom: 35px !important; display: block;">
+            POR PRIMERA VEZ EN MÉXICO
+        </span>
+
+        <img src="/image/Indios Beta Logo.png" alt="Indios Beta"
+            style="max-width: 320px; width: 100%; height: auto; margin-bottom: 20px !important; display: block;"
+            class="mx-auto drop-shadow-2xl" />
+
+        <div class="hero-buttons flex gap-5 justify-center">
+            <a href="#fechas"
+                class="btn btn-primary bg-gradient-to-br from-[#b000b0] to-[#6000ff] text-white px-8 py-3 rounded-xl font-bold uppercase tracking-wider hover:-translate-y-0.5 transition-transform shadow-[0_4px_15px_rgba(176,0,176,0.4)] no-underline">Boletos</a>
+            <a href="https://cantoqueune.com/indios-beta/"
+                class="btn btn-secondary bg-transparent border-2 border-[#b000b0] text-white px-8 py-3 rounded-xl font-bold uppercase tracking-wider hover:bg-[#b000b0] transition-colors no-underline">Saber
+                más</a>
+        </div>
+    </div>
+
+    <!-- Audio Player (Optimizado) -->
+    <div class="absolute bottom-10 right-10 flex flex-col items-center gap-2" style="z-index: 9999;">
+        <audio id="hero-audio-unique" src="/image/musica-indiosbeta.mp3" loop></audio>
+        <button id="audio-control-unique"
+            style="position: relative; display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 50%; border: 2px solid #b000b0; background-color: transparent; cursor: pointer; transition: transform 0.3s; z-index: 99999;"
+            onmouseover="this.style.backgroundColor='#b000b0'; this.style.transform='scale(1.1)';"
+            onmouseout="this.style.backgroundColor='transparent'; this.style.transform='scale(1.0)';"
+            aria-label="Reproducir música"
+            onclick="event.preventDefault(); event.stopPropagation(); toggleAudioUnique();">
+
+            <div id="icon-play-unique" style="display: block; color: white;">
+                <i class="fas fa-play" style="font-size: 1.25rem;"></i>
+            </div>
+            <div id="icon-pause-unique" style="display: none; color: white;">
+                <i class="fas fa-pause" style="font-size: 1.25rem;"></i>
+            </div>
+        </button>
+        <span id="text-play-unique"
+            style="display: block; font-size: 1rem; font-weight: bold; color: white; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Play</span>
+        <span id="text-pause-unique"
+            style="display: none; font-size: 1rem; font-weight: bold; color: white; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Pause</span>
+    </div>
+
+    <script>
+        function toggleAudioUnique() {
+            var audio = document.getElementById("hero-audio-unique");
+            var iconPlay = document.getElementById("icon-play-unique");
+            var iconPause = document.getElementById("icon-pause-unique");
+            var textPlay = document.getElementById("text-play-unique");
+            var textPause = document.getElementById("text-pause-unique");
+
+            if (!audio) return;
+
+            if (audio.paused) {
+                var playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                        iconPlay.style.display = "none";
+                        iconPause.style.display = "block";
+                        textPlay.style.display = "none";
+                        textPause.style.display = "block";
+                    })
+                        .catch(error => {
+                            console.log("Audio play blocked:", error);
+                        });
+                }
+            } else {
+                audio.pause();
+                iconPlay.style.display = "block";
+                iconPause.style.display = "none";
+                textPlay.style.display = "block";
+                textPause.style.display = "none";
+            }
+        }
+    </script>
+</section>
+
+<!-- =========================================
+     COUNTDOWN SECTION
+     ========================================= -->
+<section class="countdown-section py-20 text-center" style="background: linear-gradient(to bottom, #050510, #0f0f2d);">
+    <div class="container mx-auto px-5">
+        <p class="text-2xl font-bold tracking-[0.2em] uppercase text-[#b000b0]"
+            style="margin-bottom: 40px !important; display: block;">
+            GIRA MÉXICO 2026
+        </p>
+
+        <h2 class="text-[2.5rem] font-bold mb-[50px] leading-tight" style="display: block;">
+            Conciertos de música medicina
+        </h2>
+
+        <div id="countdown" class="countdown-timer flex justify-center gap-10 mb-[50px]">
+            <div class="time-block flex flex-col items-center">
+                <span id="days"
+                    class="text-[3.5rem] font-bold leading-none bg-clip-text text-transparent bg-gradient-to-br from-[#b000b0] to-[#6000ff]">00</span>
+                <label class="text-sm uppercase tracking-widest mt-2 text-[#b3b3b3]">Días</label>
+            </div>
+            <div class="time-block flex flex-col items-center">
+                <span id="hours"
+                    class="text-[3.5rem] font-bold leading-none bg-clip-text text-transparent bg-gradient-to-br from-[#b000b0] to-[#6000ff]">00</span>
+                <label class="text-sm uppercase tracking-widest mt-2 text-[#b3b3b3]">Hrs</label>
+            </div>
+            <div class="time-block flex flex-col items-center">
+                <span id="minutes"
+                    class="text-[3.5rem] font-bold leading-none bg-clip-text text-transparent bg-gradient-to-br from-[#b000b0] to-[#6000ff]">00</span>
+                <label class="text-sm uppercase tracking-widest mt-2 text-[#b3b3b3]">Min</label>
+            </div>
+            <div class="time-block flex flex-col items-center">
+                <span id="seconds"
+                    class="text-[3.5rem] font-bold leading-none bg-clip-text text-transparent bg-gradient-to-br from-[#b000b0] to-[#6000ff]">00</span>
+                <label class="text-sm uppercase tracking-widest mt-2 text-[#b3b3b3]">Seg</label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     TOUR DATES SECTION (RENOVADO V13 - Estilos En Línea)
+     ========================================= -->
+<section id="fechas" class="dates-section py-20 relative bg-cover bg-center"
+    style="background-image: url('/image/principal/conciertos/bg-fechas.png');">
+    <div class="absolute inset-0 bg-[#050510]/50 z-0"></div>
+    <div class="container mx-auto px-5 relative z-10">
+        <h2 class="section-title text-center text-[2.5rem] font-bold mb-12 relative pb-4">
+            Conciertos
+            <span
+                class="block w-[60px] h-[3px] bg-gradient-to-r from-[#b000b0] to-[#6000ff] mx-auto mt-2 rounded-[2px] absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+        </h2>
+
+        <div class="dates-list canto-dates-wrapper mx-auto flex flex-col">
+
+            <!-- MORELOS (Antes CDMX) -->
+            <div class="canto-date-row hover:bg-white/5 transition-colors">
+                <div class="canto-date-col-date">
+                    <span class="day"
+                        style="display: block; font-size: 2.5rem; font-weight: 700; line-height: 1; color: #ffffff;">02</span>
+                    <span class="month"
+                        style="display: block; font-size: 0.875rem; font-weight: 700; color: #b000b0; text-transform: uppercase;">ABRIL</span>
+                </div>
+
+                <div class="canto-date-col-info">
+                    <span class="text-xs text-[#b000b0] uppercase tracking-widest font-bold mb-1 block">Indios
+                        Beta</span>
+                    <div class="canto-location-header">
+                        <i class="fas fa-map-marker-alt" style="color: #FFD700 !important; font-size: 1.25rem;"></i>
+                        <h3 class="canto-city-title">MORELOS</h3>
+                    </div>
+                    <!-- <p class="text-[#b3b3b3] text-sm md:ml-6 m-0">Teatro de la Ciudad</p> -->
+                </div>
+
+                <div class="canto-date-col-btn">
+                    <a href="https://mpago.la/25BMbco" target="_blank"
+                        style="display: inline-flex;  align-items: center; justify-content: center; text-decoration: none; background: linear-gradient(135deg, #b000b0, #6000ff); width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(176,0,176,0.4); text-align: center;">CONCIERTO</a>
+                    <a href="https://mpago.li/2X2v847" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: background 0.3s;"
+                        onmouseover="this.style.backgroundColor='#b000b0'"
+                        onmouseout="this.style.backgroundColor='transparent'">RETIRO</a>
+                    <a href="https://mpago.la/2CfKnWR" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 160px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: background 0.3s;"
+                        onmouseover="this.style.backgroundColor='#b000b0'"
+                        onmouseout="this.style.backgroundColor='transparent'">RETIRO + CONCIERTO</a>
+                </div>
+            </div>
+
+            <!-- MONTERREY -->
+            <div class="canto-date-row hover:bg-white/5 transition-colors">
+                <div class="canto-date-col-date">
+                    <span class="day"
+                        style="display: block; font-size: 2.5rem; font-weight: 700; line-height: 1; color: #ffffff;">09</span>
+                    <span class="month"
+                        style="display: block; font-size: 0.875rem; font-weight: 700; color: #b000b0; text-transform: uppercase;">ABRIL</span>
+                </div>
+
+                <div class="canto-date-col-info">
+                    <span class="text-xs text-[#b000b0] uppercase tracking-widest font-bold mb-1 block">Indios
+                        Beta</span>
+                    <div class="canto-location-header">
+                        <i class="fas fa-map-marker-alt" style="color: #FFD700 !important; font-size: 1.25rem;"></i>
+                        <h3 class="canto-city-title">MONTERREY</h3>
+                    </div>
+                    <!-- <p class="text-[#b3b3b3] text-sm md:ml-6 m-0">Auditorio Pabellón M</p> -->
+                </div>
+
+                <div class="canto-date-col-btn">
+                    <a href="https://mpago.li/17z4kGn" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: linear-gradient(135deg, #b000b0, #6000ff); width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(176,0,176,0.4); text-align: center;">CONCIERTO</a>
+                    <a href="https://mpago.li/2ime1wu" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: background 0.3s;"
+                        onmouseover="this.style.backgroundColor='#b000b0'"
+                        onmouseout="this.style.backgroundColor='transparent'">RETIRO</a>
+                    <a href="https://mpago.la/2stk7YT" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 160px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: background 0.3s;"
+                        onmouseover="this.style.backgroundColor='#b000b0'"
+                        onmouseout="this.style.backgroundColor='transparent'">RETIRO + CONCIERTO</a>
+                </div>
+            </div>
+
+            <!-- MÉRIDA -->
+            <div class="canto-date-row hover:bg-white/5 transition-colors">
+                <div class="canto-date-col-date">
+                    <span class="day"
+                        style="display: block; font-size: 2.5rem; font-weight: 700; line-height: 1; color: #ffffff;">16</span>
+                    <span class="month"
+                        style="display: block; font-size: 0.875rem; font-weight: 700; color: #b000b0; text-transform: uppercase;">ABRIL</span>
+                </div>
+
+                <div class="canto-date-col-info">
+                    <span class="text-xs text-[#b000b0] uppercase tracking-widest font-bold mb-1 block">Indios
+                        Beta</span>
+                    <div class="canto-location-header">
+                        <i class="fas fa-map-marker-alt" style="color: #FFD700 !important; font-size: 1.25rem;"></i>
+                        <h3 class="canto-city-title">MÉRIDA</h3>
+                    </div>
+                    <!-- <p class="text-[#b3b3b3] text-sm md:ml-6 m-0">Lugar por confirmar</p> -->
+                </div>
+
+                <div class="canto-date-col-btn">
+                    <a href="https://mpago.li/2meTSeG" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: linear-gradient(135deg, #b000b0, #6000ff); width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(176,0,176,0.4); text-align: center;">CONCIERTO</a>
+                    <a href="https://mpago.li/1Wb2hv8" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: background 0.3s;"
+                        onmouseover="this.style.backgroundColor='#b000b0'"
+                        onmouseout="this.style.backgroundColor='transparent'">RETIRO</a>
+                    <a href="https://mpago.la/23o2bjE" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: transparent; border: 2px solid #b000b0; width: 160px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: background 0.3s;"
+                        onmouseover="this.style.backgroundColor='#b000b0'"
+                        onmouseout="this.style.backgroundColor='transparent'">RETIRO + CONCIERTO</a>
+                </div>
+            </div>
+
+            <!-- CONCIERTO ESPECIAL (25 ABRIL) -->
+            <div class="canto-date-row hover:bg-white/5 transition-colors">
+                <div class="canto-date-col-date">
+                    <span class="day"
+                        style="display: block; font-size: 2.5rem; font-weight: 700; line-height: 1; color: #ffffff;">25</span>
+                    <span class="month"
+                        style="display: block; font-size: 0.875rem; font-weight: 700; color: #b000b0; text-transform: uppercase;">ABRIL</span>
+                </div>
+
+                <div class="canto-date-col-info">
+                    <span class="text-xs text-[#d4af37] uppercase tracking-widest font-bold mb-1 block">Invitados
+                        especiales</span>
+                    <div class="canto-location-header">
+                        <i class="fas fa-map-marker-alt" style="color: #FFD700 !important; font-size: 1.25rem;"></i>
+                        <h3 class="canto-city-title">CDMX</h3>
+                    </div>
+                </div>
+
+                <div class="canto-date-col-btn">
+                    <a href="https://mpago.la/1Z2xfq3" target="_blank"
+                        style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: linear-gradient(135deg, #b000b0, #6000ff); width: 120px; height: 40px; font-size: 0.70rem; border-radius: 8px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(176,0,176,0.4); text-align: center;">CONCIERTO</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     CEREMONIES SECTION
+     ========================================= -->
+<section id="paquetes" class="ceremonies-section py-24 bg-cover bg-center bg-fixed"
+    style="background-image: linear-gradient(rgba(5, 5, 16, 0.9), rgba(5, 5, 16, 0.8)), url('/image/principal/ceremonias/ceremonias.png');">
+    <div class="container mx-auto px-5">
+        <h2 class="section-title text-center text-[2.5rem] font-bold mb-16 relative pb-4">
+            Paquetes Disponibles
+            <span
+                class="block w-[60px] h-[3px] bg-gradient-to-r from-[#b000b0] to-[#6000ff] mx-auto mt-2 rounded-[2px] absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+        </h2>
+
+        <div class="cards-grid grid grid-cols-1 md:grid-cols-3 gap-6 items-start max-w-[1150px] mx-auto">
+
+            <!-- Package 1: CONCIERTO -->
+            <div class="package-card bg-[#121225]/80 scale-105 z-10 rounded-3xl p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-2"
+                style="border: 2px solid #b000b0; box-shadow: 0 0 20px rgba(176,0,176,0.2);">
+                <div class="card-header text-center mb-8 pb-5 border-b border-white/10">
+                    <div class="flex justify-center gap-4 mb-4 text-[#b000b0]">
+                        <i class="fas fa-guitar fa-2x"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Concierto</h3>
+                    <p class="text-[#b3b3b3] text-sm">Disfruta de la música medicina en vivo.</p>
+                </div>
+                <div class="phases-list flex flex-col gap-5 mb-8">
+                    <div
+                        class="phase-item bg-white/5 p-4 rounded-xl border border-white/5 flex items-center justify-between">
+                        <div class="phase-info">
+                            <span class="block font-bold text-[gold] uppercase text-sm tracking-wider">Fase 1</span>
+                            <span class="text-xs text-[#b3b3b3] bg-white/10 px-2 py-0.5 rounded">Preventa</span>
+                        </div>
+                        <div class="phase-price text-2xl font-bold">$600 <span
+                                class="text-sm font-normal text-[#b3b3b3]">MXN</span></div>
+                    </div>
+                    <div
+                        class="phase-item bg-white/5 p-4 rounded-xl border border-white/5 flex items-center justify-between">
+                        <div class="phase-info">
+                            <span class="block font-bold text-[gold] uppercase text-sm tracking-wider">Fase 2</span>
+                            <span class="text-xs text-[#b3b3b3] bg-white/10 px-2 py-0.5 rounded">Venta General</span>
+                        </div>
+                        <div class="phase-price text-2xl font-bold">$800 <span
+                                class="text-sm font-normal text-[#b3b3b3]">MXN</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 2: RETIRO -->
+            <div class="package-card bg-[#121225]/80 scale-105 z-10 rounded-3xl p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-2"
+                style="border: 2px solid #b000b0; box-shadow: 0 0 20px rgba(176,0,176,0.2);">
+                <div class="card-header text-center mb-8 pb-5 border-b border-white/10">
+                    <div class="flex justify-center gap-4 mb-4 text-[#b000b0]">
+                        <i class="fas fa-fire fa-2x"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Retiro</h3>
+                    <p class="text-[#b3b3b3] text-sm font-bold text-[#b000b0]">Reserva desde $2,000</p>
+                </div>
+                <div class="phases-list flex flex-col gap-5 mb-8">
+                    <div
+                        class="phase-item bg-white/5 p-4 rounded-xl border border-white/5 flex items-center justify-between">
+                        <div class="phase-info">
+                            <span class="block font-bold text-[gold] uppercase text-sm tracking-wider">Fase 1</span>
+                            <span class="text-xs text-[#b3b3b3] bg-white/10 px-2 py-0.5 rounded">Preventa</span>
+                        </div>
+                        <div class="phase-price text-2xl font-bold">$6,000 <span
+                                class="text-sm font-normal text-[#b3b3b3]">MXN</span></div>
+                    </div>
+                    <div
+                        class="phase-item bg-white/5 p-4 rounded-xl border border-white/5 flex items-center justify-between">
+                        <div class="phase-info">
+                            <span class="block font-bold text-[gold] uppercase text-sm tracking-wider">Fase 2</span>
+                            <span class="text-xs text-[#b3b3b3] bg-white/10 px-2 py-0.5 rounded">Venta General</span>
+                        </div>
+                        <div class="phase-price text-2xl font-bold">$7,000 <span
+                                class="text-sm font-normal text-[#b3b3b3]">MXN</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 3: RETIRO + CONCIERTO -->
+            <div class="package-card bg-[#121225]/80 scale-105 z-10 rounded-3xl p-8 relative overflow-hidden transition-all duration-300 hover:-translate-y-2"
+                style="border: 2px solid #b000b0; box-shadow: 0 0 20px rgba(176,0,176,0.2);">
+                <div class="card-header text-center mb-8 pb-5 border-b border-white/10">
+                    <div class="flex justify-center gap-4 mb-4 text-[#b000b0]">
+                        <i class="fas fa-fire fa-2x"></i>
+                        <i class="fas fa-guitar fa-2x"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Retiro + Concierto</h3>
+                    <p class="text-[#b3b3b3] text-sm font-bold text-[#b000b0]">Reserva desde $2,500</p>
+                </div>
+                <div class="phases-list flex flex-col gap-5 mb-8">
+                    <div
+                        class="phase-item bg-white/5 p-4 rounded-xl border border-white/5 flex items-center justify-between">
+                        <div class="phase-info">
+                            <span class="block font-bold text-[gold] uppercase text-sm tracking-wider">Fase 1</span>
+                            <span class="text-xs text-[#b3b3b3] bg-white/10 px-2 py-0.5 rounded">Preventa</span>
+                        </div>
+                        <div class="phase-price text-2xl font-bold">$6,500 <span
+                                class="text-sm font-normal text-[#b3b3b3]">MXN</span></div>
+                    </div>
+                    <div
+                        class="phase-item bg-white/5 p-4 rounded-xl border border-white/5 flex items-center justify-between">
+                        <div class="phase-info">
+                            <span class="block font-bold text-[gold] uppercase text-sm tracking-wider">Fase 2</span>
+                            <span class="text-xs text-[#b3b3b3] bg-white/10 px-2 py-0.5 rounded">Venta General</span>
+                        </div>
+                        <div class="phase-price text-2xl font-bold">$7,600 <span
+                                class="text-sm font-normal text-[#b3b3b3]">MXN</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     SEMANDO SEMILLAS SECTION
+     ========================================= -->
+<section class="sembrando-semillas-section py-12 bg-cover bg-center" style="background-color: #050510;">
+    <div class="container mx-auto px-5">
+        <div
+            style="width: 80%; margin: 4rem auto; padding: 40px; border: 2px solid #b000b0; border-radius: 1.5rem; background-color: rgba(0, 0, 0, 0.33); box-shadow: 0 0 20px rgba(176,0,176,0.1); text-align: center;">
+            <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 2rem; color: white;">
+                🌱 Sembrando Semillas
+                <span
+                    class="block w-[60px] h-[3px] bg-gradient-to-r from-[#b000b0] to-[#6000ff] mx-auto mt-4 rounded-[2px]"></span>
+            </h2>
+
+            <p class="text-[#b3b3b3] text-[1rem] mb-6 leading-relaxed italic">
+                Creemos que todo comienza con una semilla:<br>
+                una intención, una palabra compartida, una invitación hecha desde el corazón.
+            </p>
+
+            <p class="text-white text-[1rem] mb-8 leading-relaxed">
+                Sembrando Semillas es nuestra forma de agradecer a quienes sienten el llamado y lo expanden.<br>
+                Cuando compartes este retiro, no solo invitas a otros: ayudas a que el círculo crezca, a que más
+                personas vivan la experiencia y a que la medicina encuentre a quien la está buscando.
+            </p>
+
+            <span
+                class="block w-[60px] h-[3px] bg-gradient-to-r from-[#b000b0] to-[#6000ff] mx-auto mb-6 rounded-[2px]"></span>
+
+            <h3
+                style="font-size: 1.25rem; font-weight: 700; color: #b000b0; margin-bottom: 1rem; margin-top: 40px; text-transform: uppercase; letter-spacing: 0.1em;">
+                ✨ Así funciona:</h3>
+            <ul class="text-white text-left inline-block mb-8 space-y-2 text-[1rem]">
+                <li>• Si convocas a <strong class="text-[#FFD700]">5 personas</strong>, cosechas medio retiro gratis.
+                </li>
+                <li>• Si convocas a <strong class="text-[#FFD700]">10 personas</strong>, cosechas tu retiro
+                    completamente gratuito.</li>
+            </ul>
+
+            <p class="text-[#b3b3b3] text-[1rem] mb-8 italic">
+                Porque cuando siembras con intención, también cosechas 🌿
+            </p>
+
+            <p class="text-white mb-8 text-[1rem]">
+                Si sientes el llamado a compartir, escríbenos.<br>
+                Queremos caminar contigo este proceso y acompañarte paso a paso.
+            </p>
+
+            <a href="https://wa.me/529618086495?text=Hola,%20quiero%20sembrar%20semillas%20con%20ustedes"
+                target="_blank"
+                style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; background: linear-gradient(135deg, #25D366, #128C7E); padding: 15px 30px; font-size: 1rem; border-radius: 50px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); transition: transform 0.2s; margin-top: 2rem;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fab fa-whatsapp mr-2 text-xl"></i> Contáctanos para Sembrar
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     PRODUCTS SECTION
+     ========================================= -->
+<section id="productos" class="products-section py-20 bg-[#08081a]">
+    <div class="container mx-auto px-5">
+        <h2 class="section-title text-center text-[2.5rem] font-bold mb-12 relative pb-4">
+            Productos
+            <span
+                class="block w-[60px] h-[3px] bg-gradient-to-r from-[#b000b0] to-[#6000ff] mx-auto mt-2 rounded-[2px] absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+        </h2>
+        <p class="text-center text-[#b3b3b3] uppercase tracking-widest mb-12"
+            style="font-size: 1rem; margin-bottom: 3rem !important;">Discografía Indios Beta</p>
+
+        <div class="products-grid flex justify-center flex-wrap gap-8 mb-12">
+            <div class="product-item text-center w-[180px] transition-transform hover:scale-105">
+                <img src="/image/principal/discos/disco1.png" alt="Album 1" class="w-full rounded-xl shadow-lg mb-4" />
+            </div>
+            <div class="product-item text-center w-[180px] transition-transform hover:scale-105">
+                <img src="/image/principal/discos/disco2.png" alt="Album 2" class="w-full rounded-xl shadow-lg mb-4" />
+            </div>
+            <div class="product-item text-center w-[180px] transition-transform hover:scale-105">
+                <img src="/image/principal/discos/disco3.png" alt="Album 3" class="w-full rounded-xl shadow-lg mb-4" />
+            </div>
+            <div class="product-item text-center w-[180px] transition-transform hover:scale-105">
+                <img src="/image/principal/discos/disco4.png" alt="Album 4" class="w-full rounded-xl shadow-lg mb-4" />
+            </div>
+            <div class="product-item text-center w-[180px] transition-transform hover:scale-105">
+                <img src="/image/principal/discos/disco5.png" alt="Album 5" class="w-full rounded-xl shadow-lg mb-4" />
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="https://cantoqueune.com/indios-beta/"
+                style="display: inline-block; text-decoration: none; background: transparent; border: 2px solid #b000b0; padding: 12px 30px; font-size: 1rem; border-radius: 12px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: background 0.3s;"
+                onmouseover="this.style.background='#b000b0'" onmouseout="this.style.background='transparent'">
+                VER MÁS
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     QUOTE SECTION
+     ========================================= -->
+<section
+    class="quote-section py-[300px] relative flex items-center justify-center text-center bg-cover bg-center bg-fixed"
+    style="background-image: url('/image/principal/bg-supp/ayahuasca3.png');">
+    <div class="overlay absolute top-0 left-0 w-full h-full bg-black/60"></div>
+    <div class="container mx-auto px-5 relative z-10">
+        <blockquote class="text-[2rem] font-bold italic font-heading leading-tight max-w-[800px] mx-auto">
+            "En el silencio de la tierra, las plantas maestras nos recuerdan quiénes somos."
+        </blockquote>
+    </div>
+</section>
+
+<!-- =========================================
+     GALLERY SECTION
+     ========================================= -->
+<section id="galeria" class="gallery-section py-24 relative bg-cover bg-center bg-fixed"
+    style="background-image: url('/image/principal/galeria/textura.png');">
+    <div class="overlay absolute top-0 left-0 w-full h-full bg-[#050510]/70 z-0"></div>
+    <div class="container mx-auto px-5 relative z-10">
+        <h2 class="section-title text-center text-[2.5rem] font-bold mb-12 relative pb-4 text-white">
+            Galería
+            <span
+                class="block w-[60px] h-[3px] bg-gradient-to-r from-[#b000b0] to-[#6000ff] mx-auto mt-2 rounded-[2px] absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+        </h2>
+
+        <style>
+            .canto-gallery-grid {
+                display: grid;
+                gap: 1rem;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            @media (min-width: 640px) {
+                .canto-gallery-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (min-width: 768px) {
+                .canto-gallery-grid {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+        </style>
+        <div class="canto-gallery-grid" id="gallery-grid">
+            <div class="gallery-item relative group overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-src="/image/principal/galeria/image22.jpg">
+                <img src="/image/principal/galeria/image22.jpg" alt="Galería 1"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+            </div>
+            <div class="gallery-item relative group overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-src="/image/principal/galeria/image23.jpg">
+                <img src="/image/principal/galeria/image23.jpg" alt="Galería 2"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+            </div>
+            <div class="gallery-item relative group overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-src="/image/principal/galeria/image24.jpg">
+                <img src="/image/principal/galeria/image24.jpg" alt="Galería 3"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+            </div>
+            <div class="gallery-item relative group overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-src="/image/principal/galeria/image25.jpg">
+                <img src="/image/principal/galeria/image25.jpg" alt="Galería 4"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+            </div>
+            <div class="gallery-item relative group overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-src="/image/principal/galeria/image26.jpg">
+                <img src="/image/principal/galeria/image26.jpg" alt="Galería 5"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+            </div>
+            <div class="gallery-item relative group overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-src="/image/principal/galeria/image27.jpg">
+                <img src="/image/principal/galeria/image27.jpg" alt="Galería 6"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+            </div>
+            <div class="gallery-item relative group overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-src="/image/principal/galeria/image28.jpg">
+                <img src="/image/principal/galeria/image28.jpg" alt="Galería 7"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+            </div>
+            <div class="gallery-item relative group overflow-hidden rounded-xl aspect-square cursor-pointer"
+                data-src="/image/principal/galeria/image29.jpg">
+                <img src="/image/principal/galeria/image29.jpg" alt="Galería 8"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Lightbox Modal -->
+<div id="gallery-modal"
+    class="hidden fixed inset-0 z-[99999] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4">
+    <button id="gallery-close"
+        class="absolute top-4 right-4 text-white/70 hover:text-white hover:bg-white/10 p-2 rounded-full cursor-pointer"><i
+            class="fas fa-times fa-2x"></i></button>
+    <button id="gallery-prev"
+        class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white bg-transparent hover:bg-white/10 hidden md:flex h-12 w-12 items-center justify-center rounded-full cursor-pointer"><i
+            class="fas fa-chevron-left fa-2x"></i></button>
+    <div class="relative max-w-5xl max-h-[85vh] w-full flex justify-center">
+        <img id="gallery-image" src="" alt="Gallery View"
+            class="max-h-[85vh] max-w-full object-contain rounded-md shadow-2xl">
+    </div>
+    <button id="gallery-next"
+        class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white bg-transparent hover:bg-white/10 hidden md:flex h-12 w-12 items-center justify-center rounded-full cursor-pointer"><i
+            class="fas fa-chevron-right fa-2x"></i></button>
+    <div class="absolute bottom-8 left-0 w-full flex justify-center gap-8 md:hidden">
+        <button id="gallery-prev-mobile" class="text-white bg-transparent p-4"><i
+                class="fas fa-chevron-left fa-2x"></i></button>
+        <button id="gallery-next-mobile" class="text-white bg-transparent p-4"><i
+                class="fas fa-chevron-right fa-2x"></i></button>
+    </div>
+</div>
+
+<!-- =========================================
+     TESTIMONIALS SECTION
+     ========================================= -->
+<!-- 
+<section class="testimonials-section py-24 bg-[#050510]">
+    <div class="container mx-auto px-5">
+        <h2 class="section-title text-center text-[2.5rem] font-bold mb-12 relative pb-4">
+            Testimonios
+            <span
+                class="block w-[60px] h-[3px] bg-gradient-to-r from-[#b000b0] to-[#6000ff] mx-auto mt-2 rounded-[2px] absolute bottom-0 left-1/2 -translate-x-1/2"></span>
+        </h2>
+        <div class="testimonials-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="testimonial-card bg-white/5 p-8 rounded-3xl text-center">
+                <div class="avatar w-20 h-20 rounded-full border-[3px] border-[#b000b0] overflow-hidden mx-auto mb-5">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Garcia"
+                        class="w-full h-full object-cover">
+                </div>
+                <p class="italic mb-5 text-lg">"Una experiencia transformadora que tocó mi alma profundamente."</p>
+                <h4 class="text-[#b000b0] font-bold">Ana García</h4>
+            </div>
+            <div class="testimonial-card bg-white/5 p-8 rounded-3xl text-center">
+                <div class="avatar w-20 h-20 rounded-full border-[3px] border-[#b000b0] overflow-hidden mx-auto mb-5">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Ruiz"
+                        class="w-full h-full object-cover">
+                </div>
+                <p class="italic mb-5 text-lg">"La música de Indios Beta es pura medicina para el corazón."</p>
+                <h4 class="text-[#b000b0] font-bold">Carlos Ruiz</h4>
+            </div>
+            <div class="testimonial-card bg-white/5 p-8 rounded-3xl text-center">
+                <div class="avatar w-20 h-20 rounded-full border-[3px] border-[#b000b0] overflow-hidden mx-auto mb-5">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sofia Luna"
+                        class="w-full h-full object-cover">
+                </div>
+                <p class="italic mb-5 text-lg">"Nunca había sentido una conexión tan fuerte en un concierto."</p>
+                <h4 class="text-[#b000b0] font-bold">Sofia Luna</h4>
+            </div>
+        </div>
+    </div>
+</section>
+ -->
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+[canto_footer]

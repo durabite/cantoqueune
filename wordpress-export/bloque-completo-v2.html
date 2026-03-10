@@ -1,0 +1,369 @@
+<!-- =========================================
+     HEADER SECTION (CORREGIDO: Siempre visible)
+     ========================================= -->
+<header
+    class="fixed top-0 left-0 w-full z-[1000] border-b border-white/5 bg-[#050510]/75 backdrop-blur-md py-4 md:py-6 shadow-lg transition-all duration-300"
+    id="main-header" style="transform: none !important;">
+    <div class="container mx-auto px-5 md:px-12 flex justify-between items-center max-w-[1200px]">
+        <a href="#" class="block">
+            <!-- NOTA: Intenta cargar el logo con ruta relativa 'image/...' en vez de '/image/...' -->
+            <img src="image/logo-cantoqueuneS.svg" alt="Canto Que Une" width="250" height="100"
+                class="block h-10 md:h-12 w-auto" />
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-8 items-center">
+            <a href="#inicio"
+                class="nav-link text-sm uppercase tracking-widest opacity-80 hover:opacity-100 transition-all text-white no-underline font-bold">Inicio</a>
+            <a href="#fechas"
+                class="nav-link text-sm uppercase tracking-widest opacity-80 hover:opacity-100 transition-all text-white no-underline font-bold">
+                <i class="fas fa-guitar text-sm mr-2"></i>Conciertos
+            </a>
+            <a href="#paquetes"
+                class="nav-link text-sm uppercase tracking-widest opacity-80 hover:opacity-100 transition-all text-white no-underline font-bold">
+                <i class="fas fa-fire text-sm mr-2"></i>Ceremonias
+            </a>
+            <a href="#productos"
+                class="nav-link text-sm uppercase tracking-widest opacity-80 hover:opacity-100 transition-all text-white no-underline font-bold">
+                <i class="fas fa-compact-disc text-sm mr-2"></i>Productos
+            </a>
+            <a href="#galeria"
+                class="nav-link text-sm uppercase tracking-widest opacity-80 hover:opacity-100 transition-all text-white no-underline font-bold">
+                <i class="fas fa-camera text-sm mr-2"></i>Galería
+            </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-toggle"
+            class="md:hidden text-white bg-transparent border border-white/30 p-2 rounded-md hover:bg-white/10"
+            aria-label="Toggle menu">
+            <i class="fas fa-bars fa-lg"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="hidden absolute top-full left-0 w-full bg-[#050510] border-b border-white/10 shadow-xl flex flex-col p-5 gap-4 text-center">
+        <a href="#inicio" class="text-white text-sm uppercase tracking-widest py-2 no-underline">Inicio</a>
+        <a href="#fechas" class="text-white text-sm uppercase tracking-widest py-2 no-underline">Fechas</a>
+        <a href="#paquetes" class="text-white text-sm uppercase tracking-widest py-2 no-underline">Ceremonias</a>
+        <a href="#productos" class="text-white text-sm uppercase tracking-widest py-2 no-underline">Productos</a>
+        <a href="#galeria" class="text-white text-sm uppercase tracking-widest py-2 no-underline">Galería</a>
+    </div>
+</header>
+
+<!-- =========================================
+     HERO SECTION (CORREGIDO: Rutas relativas y z-index)
+     ========================================= -->
+<section id="inicio"
+    class="hero relative w-full h-screen flex items-center justify-center text-center bg-[#050510] overflow-hidden"
+    style="min-height: 100vh;">
+    <!-- Video BG -->
+    <div class="hero-video-bg absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
+        <video autoplay loop muted playsinline
+            class="absolute top-1/2 left-1/2 w-full h-full object-cover transform -translate-x-1/2 -translate-y-1/2 opacity-60">
+            <source src="image/BG-Hero.mp4" type="video/mp4">
+            <!-- Fallback para rutas absolutas si la relativa falla -->
+            <source src="/image/BG-Hero.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Overlay Gradient -->
+    <div class="hero-overlay absolute top-0 left-0 w-full h-full z-1 pointer-events-none"
+        style="background: linear-gradient(to bottom, rgba(5,5,16,0.2), #050510);"></div>
+
+    <!-- Content -->
+    <div class="container relative z-10 px-5 pt-20 flex flex-col items-center">
+        <img src="image/logo-cantoqueuneG.svg" alt="Canto Que Une"
+            class="max-w-[270px] w-full mb-8 drop-shadow-[0_0_10px_rgba(176,0,176,0.5)]" />
+
+        <h1 class="text-white text-[3rem] md:text-[4rem] leading-tight mb-10 font-bold"
+            style="text-shadow: 0 0 20px rgba(0,0,0,0.8);">
+            <span class="block text-2xl md:text-3xl font-light mb-2 font-sans opacity-90">POR PRIMERA VEZ EN
+                MÉXICO</span>
+            Indios Beta
+        </h1>
+
+        <div class="flex flex-col md:flex-row gap-5 justify-center w-full">
+            <a href="#fechas"
+                class="bg-gradient-to-br from-[#b000b0] to-[#6000ff] text-white px-8 py-4 rounded-xl font-bold uppercase tracking-wider hover:opacity-90 transition-all shadow-lg no-underline inline-block">Boletos</a>
+            <a href="#conocenos"
+                class="bg-transparent border-2 border-[#b000b0] text-white px-8 py-4 rounded-xl font-bold uppercase tracking-wider hover:bg-[#b000b0] transition-all no-underline inline-block">Saber
+                más</a>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     COUNTDOWN SECTION
+     ========================================= -->
+<section class="py-20 text-center bg-[#050510]" style="background: linear-gradient(to bottom, #050510, #0f0f2d);">
+    <div class="container mx-auto px-5">
+        <p class="text-xl md:text-2xl font-bold tracking-[0.2em] mb-4 uppercase text-[#b000b0]">GIRA MÉXICO 2025</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Conciertos de música medicina</h2>
+
+        <div class="flex flex-wrap justify-center gap-6 md:gap-12 mb-12" id="countdown">
+            <div class="flex flex-col items-center">
+                <span id="days"
+                    class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#b000b0] to-[#6000ff]">00</span>
+                <span class="text-gray-400 uppercase text-sm tracking-widest mt-2">Días</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span id="hours"
+                    class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#b000b0] to-[#6000ff]">00</span>
+                <span class="text-gray-400 uppercase text-sm tracking-widest mt-2">Hrs</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span id="minutes"
+                    class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#b000b0] to-[#6000ff]">00</span>
+                <span class="text-gray-400 uppercase text-sm tracking-widest mt-2">Min</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span id="seconds"
+                    class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#b000b0] to-[#6000ff]">00</span>
+                <span class="text-gray-400 uppercase text-sm tracking-widest mt-2">Seg</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     TOUR DATES SECTION
+     ========================================= -->
+<section id="fechas" class="py-20 relative bg-cover bg-center"
+    style="background-image: url('image/principal/conciertos/bg-fechas.png');">
+    <div class="absolute inset-0 bg-[#050510]/80"></div>
+    <div class="container mx-auto px-5 relative z-10">
+        <h2 class="text-center text-4xl font-bold mb-12 text-white">Conciertos</h2>
+
+        <div class="max-w-3xl mx-auto flex flex-col gap-0 border-t border-white/10">
+            <!-- Fecha 1 -->
+            <div
+                class="flex flex-col md:flex-row items-center justify-between p-6 border-b border-white/10 hover:bg-white/5 transition-colors gap-6 text-center md:text-left">
+                <div class="min-w-[80px]">
+                    <span class="block text-4xl font-bold text-white">02</span>
+                    <span class="block text-sm font-bold text-[#b000b0]">ABRIL</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-white mb-1">CDMX</h3>
+                    <p class="text-gray-400 text-sm">Teatro de la Ciudad</p>
+                </div>
+                <button
+                    class="border border-white/30 text-white px-8 py-3 rounded-xl hover:bg-white hover:text-black transition-all uppercase font-bold text-sm">Reservar</button>
+            </div>
+            <!-- Fecha 2 -->
+            <div
+                class="flex flex-col md:flex-row items-center justify-between p-6 border-b border-white/10 hover:bg-white/5 transition-colors gap-6 text-center md:text-left">
+                <div class="min-w-[80px]">
+                    <span class="block text-4xl font-bold text-white">09</span>
+                    <span class="block text-sm font-bold text-[#b000b0]">ABRIL</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-white mb-1">MONTERREY</h3>
+                    <p class="text-gray-400 text-sm">Auditorio Pabellón M</p>
+                </div>
+                <button
+                    class="border border-white/30 text-white px-8 py-3 rounded-xl hover:bg-white hover:text-black transition-all uppercase font-bold text-sm">Reservar</button>
+            </div>
+            <!-- Fecha 3 -->
+            <div
+                class="flex flex-col md:flex-row items-center justify-between p-6 border-b border-white/10 hover:bg-white/5 transition-colors gap-6 text-center md:text-left">
+                <div class="min-w-[80px]">
+                    <span class="block text-4xl font-bold text-white">16</span>
+                    <span class="block text-sm font-bold text-[#b000b0]">ABRIL</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-white mb-1">TULUM</h3>
+                    <p class="text-gray-400 text-sm">Holistika</p>
+                </div>
+                <button
+                    class="border border-white/30 text-white px-8 py-3 rounded-xl hover:bg-white hover:text-black transition-all uppercase font-bold text-sm">Reservar</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     CEREMONIES SECTION
+     ========================================= -->
+<section id="paquetes" class="py-24 bg-cover bg-center bg-fixed relative"
+    style="background-image: url('image/principal/ceremonias/ceremonias.png');">
+    <div class="absolute inset-0 bg-[#050510]/90"></div>
+    <div class="container mx-auto px-5 relative z-10">
+        <h2 class="text-center text-4xl font-bold mb-16 text-white">Paquetes Disponibles</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+            <!-- Card 1 -->
+            <div
+                class="bg-[#121225]/80 backdrop-blur border border-white/10 rounded-2xl p-8 hover:-translate-y-2 transition-transform">
+                <div class="text-center mb-8">
+                    <i class="fas fa-fire fa-2x text-[#b000b0] mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Solo Ceremonia</h3>
+                    <p class="text-gray-400 text-sm">Experiencia profunda de conexión.</p>
+                </div>
+                <div class="space-y-4 mb-8">
+                    <div class="flex justify-between items-center bg-white/5 p-3 rounded-lg border border-white/5">
+                        <span class="text-[gold] font-bold text-sm">FASE 1</span>
+                        <span class="font-bold text-xl">$1,200</span>
+                    </div>
+                    <div class="flex justify-between items-center bg-white/5 p-3 rounded-lg border border-white/5">
+                        <span class="text-[gold] font-bold text-sm">FASE 2</span>
+                        <span class="font-bold text-xl">$1,380</span>
+                    </div>
+                </div>
+                <button
+                    class="w-full border border-white/30 py-4 rounded-xl font-bold hover:bg-white hover:text-black transition-colors">RESERVAR</button>
+            </div>
+
+            <!-- Card 2 (Featured) -->
+            <div
+                class="bg-[#121225] border-2 border-[#b000b0] rounded-2xl p-8 relative transform md:scale-105 shadow-[0_0_30px_rgba(176,0,176,0.3)]">
+                <span
+                    class="absolute top-0 right-0 bg-[#b000b0] text-xs font-bold px-4 py-1 rounded-bl-xl text-white">RECOMENDADO</span>
+                <div class="text-center mb-8">
+                    <div class="flex justify-center gap-3 text-[#b000b0] mb-4">
+                        <i class="fas fa-fire fa-2x"></i>
+                        <i class="fas fa-guitar fa-2x"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Ceremonia + Concierto</h3>
+                    <p class="text-gray-400 text-sm">La experiencia completa.</p>
+                </div>
+                <div class="space-y-4 mb-8">
+                    <div class="flex justify-between items-center bg-white/5 p-3 rounded-lg border border-white/5">
+                        <span class="text-[gold] font-bold text-sm">FASE 1</span>
+                        <span class="font-bold text-xl">$2,500</span>
+                    </div>
+                    <div class="flex justify-between items-center bg-white/5 p-3 rounded-lg border border-white/5">
+                        <span class="text-[gold] font-bold text-sm">FASE 2</span>
+                        <span class="font-bold text-xl">$2,875</span>
+                    </div>
+                </div>
+                <button
+                    class="w-full bg-[#b000b0] py-4 rounded-xl font-bold hover:brightness-110 transition-colors">RESERVAR</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-[#121225]/80 backdrop-blur border border-white/10 rounded-2xl p-8 hover:-translate-y-2 transition-transform">
+                <div class="text-center mb-8">
+                    <i class="fas fa-guitar fa-2x text-[#b000b0] mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Solo Concierto</h3>
+                    <p class="text-gray-400 text-sm">Música medicina en vivo.</p>
+                </div>
+                <div class="space-y-4 mb-8">
+                    <div class="flex justify-between items-center bg-white/5 p-3 rounded-lg border border-white/5">
+                        <span class="text-[gold] font-bold text-sm">FASE 1</span>
+                        <span class="font-bold text-xl">$900</span>
+                    </div>
+                    <div class="flex justify-between items-center bg-white/5 p-3 rounded-lg border border-white/5">
+                        <span class="text-[gold] font-bold text-sm">FASE 2</span>
+                        <span class="font-bold text-xl">$1,035</span>
+                    </div>
+                </div>
+                <button
+                    class="w-full border border-white/30 py-4 rounded-xl font-bold hover:bg-white hover:text-black transition-colors">RESERVAR</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     PRODUCTS SECTION
+     ========================================= -->
+<section id="productos" class="py-20 bg-[#08081a]">
+    <div class="container mx-auto px-5">
+        <h2 class="text-center text-4xl font-bold mb-12 text-white">Productos</h2>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="w-[180px] hover:scale-105 transition-transform"><img src="image/principal/discos/disco1.png"
+                    class="w-full rounded-lg shadow-lg"></div>
+            <div class="w-[180px] hover:scale-105 transition-transform"><img src="image/principal/discos/disco2.png"
+                    class="w-full rounded-lg shadow-lg"></div>
+            <div class="w-[180px] hover:scale-105 transition-transform"><img src="image/principal/discos/disco3.png"
+                    class="w-full rounded-lg shadow-lg"></div>
+            <div class="w-[180px] hover:scale-105 transition-transform"><img src="image/principal/discos/disco4.png"
+                    class="w-full rounded-lg shadow-lg"></div>
+            <div class="w-[180px] hover:scale-105 transition-transform"><img src="image/principal/discos/disco5.png"
+                    class="w-full rounded-lg shadow-lg"></div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================================
+     QUOTE SECTION
+     ========================================= -->
+<section class="py-40 relative flex items-center justify-center bg-cover bg-fixed text-center"
+    style="background-image: url('image/principal/bg-supp/ayahuasca3.png');">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 container px-5">
+        <blockquote class="text-2xl md:text-4xl italic font-serif text-white max-w-4xl mx-auto">
+            "En el silencio de la tierra, las plantas maestras nos recuerdan quiénes somos."
+        </blockquote>
+    </div>
+</section>
+
+<!-- =========================================
+     GALLERY & FOOTER
+     ========================================= -->
+<section id="galeria" class="py-20 relative bg-[#050510]">
+    <div class="container mx-auto px-5">
+        <h2 class="text-center text-4xl font-bold mb-12 text-white">Galería</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="aspect-square bg-white/5 rounded-xl overflow-hidden gallery-item cursor-pointer group"
+                data-src="image/principal/galeria/image01.jpeg">
+                <img src="image/principal/galeria/image01.jpeg"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+            </div>
+            <div class="aspect-square bg-white/5 rounded-xl overflow-hidden gallery-item cursor-pointer group"
+                data-src="image/principal/galeria/image02.jpeg">
+                <img src="image/principal/galeria/image02.jpeg"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+            </div>
+            <div class="aspect-square bg-white/5 rounded-xl overflow-hidden gallery-item cursor-pointer group"
+                data-src="image/principal/galeria/image03.jpeg">
+                <img src="image/principal/galeria/image03.jpeg"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+            </div>
+            <div class="aspect-square bg-white/5 rounded-xl overflow-hidden gallery-item cursor-pointer group"
+                data-src="image/principal/galeria/image04.jpeg">
+                <img src="image/principal/galeria/image04.jpeg"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+            </div>
+            <div class="aspect-square bg-white/5 rounded-xl overflow-hidden gallery-item cursor-pointer group"
+                data-src="image/principal/galeria/image05.jpeg">
+                <img src="image/principal/galeria/image05.jpeg"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+            </div>
+            <div class="aspect-square bg-white/5 rounded-xl overflow-hidden gallery-item cursor-pointer group"
+                data-src="image/principal/galeria/image06.jpeg">
+                <img src="image/principal/galeria/image06.jpeg"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-10 bg-black text-center border-t border-white/10 text-gray-500">
+    <div class="flex justify-center gap-6 text-2xl mb-4">
+        <i class="fas fa-om"></i>
+        <i class="fas fa-spa"></i>
+        <i class="fas fa-leaf"></i>
+        <i class="fas fa-moon"></i>
+    </div>
+    <p>&copy; 2025 Canto Que Une. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Gallery Modal (Hidden by default) -->
+<div id="gallery-modal" class="hidden fixed inset-0 z-[99999] bg-black/95 items-center justify-center p-4">
+    <button id="gallery-close"
+        class="absolute top-5 right-5 text-white p-2 bg-white/10 rounded-full cursor-pointer hover:bg-white/30 z-50">
+        <i class="fas fa-times fa-lg"></i>
+    </button>
+    <img id="gallery-image" src="" class="max-h-[90vh] max-w-full rounded shadow-lg">
+    <!-- Controls (optional, logic in main.js handles clicks) -->
+    <button id="gallery-prev"
+        class="absolute left-5 text-white p-4 bg-white/5 rounded-full hover:bg-white/20 hidden md:block"><i
+            class="fas fa-chevron-left fa-2x"></i></button>
+    <button id="gallery-next"
+        class="absolute right-5 text-white p-4 bg-white/5 rounded-full hover:bg-white/20 hidden md:block"><i
+            class="fas fa-chevron-right fa-2x"></i></button>
+</div>
